@@ -23,8 +23,6 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 
 #### Manually
 
-iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us to obtain the [SMBIOS] information.
-
 |Step|Description|
 |:------|:------|
 |1|Create the ```iPowerShellSmbios``` folder in ```%programfiles%\WindowsPowerShell\Modules```|
