@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6FEDBB9-F790-4A8A-B0DE-B393DA56725C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iPowerShellSmbios</RootNamespace>
+    <AssemblyName>iPowerShellSmbios</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\iPowerShellSmbios.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPowerShellSmbios.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iTin.Core, Version=2.0.0.1, Culture=neutral, PublicKeyToken=91c459d24f0559c7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.Common, Version=1.0.0.1, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Core.Hardware.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Hardware.Windows.Smbios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55a914aaf3e07893, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Core.Hardware.Windows.Smbios.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Core.Interop.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Core.Interop.Windows.Smbios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1863a70dcfb63184, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Core.Interop.Windows.Smbios.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Hardware.Specification.Dmi, Version=3.3.0.4, Culture=neutral, PublicKeyToken=a3a09d06f07dcb12, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Hardware.Specification.Dmi.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Hardware.Specification.Smbios, Version=3.3.0.3, Culture=neutral, PublicKeyToken=6d7fbabce1236cba, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Hardware.Specification.Smbios.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Hardware.Specification.Tpm, Version=1.0.0.1, Culture=neutral, PublicKeyToken=b26d2e12e8dc6356, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Hardware.Specification.Tpm.dll</HintPath>
+    </Reference>
+    <Reference Include="iTin.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1f353418c19ff38d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\iSMBIOS.1.1.5\lib\net461\iTin.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\System.Management.Automation_3_0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmdlets\Items\SmbiosImplementedPropertiesCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\SmbiosPropertyCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\SmbiosPropertyDetailCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\SmbiosAvailableStructuresCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\SmbiosLocatePropertyCmdlet.cs" />
+    <Compile Include="Cmdlets\Items\SmbiosVersionCmdlet.cs" />
+    <Compile Include="Cmdlets\Results\PropertyDetailResult.cs" />
+    <Compile Include="Cmdlets\Results\PropertyDefinitionResult.cs" />
+    <Compile Include="Cmdlets\Results\StructureResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="iPowerShellSmbios.psd1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets" Condition="Exists('..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\XmlDoc2CmdletDoc.0.3.0\build\XmlDoc2CmdletDoc.targets'))" />
+  </Target>
+</Project>
