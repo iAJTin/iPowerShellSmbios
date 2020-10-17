@@ -30,7 +30,7 @@ How to get the value of the Vendor property?
 First we make a call to 'Get-SmbiosLocateProperty', to search among all the available properties of our system those that call 'Vendor' and
 then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information, remember that a property is made up of its key and its value.
 
-PS> Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Vendor -Class Bios)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Vendor -Class Bios))
+PS> Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Vendor -Class Bios) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Vendor -Class Bios)
 
 Key                                               Value
 ---                                               -----
@@ -46,7 +46,7 @@ First we make a call to 'Get-SmbiosLocateProperty', to search among all the avai
 the 5th element of the array (remember zero index in arrays) and then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information,
 remember that a property is made up of its key and its value.
 
-PS> Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4))
+PS> Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4)
 
 Name         : AssetTag
 Value        :
