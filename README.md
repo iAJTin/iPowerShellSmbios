@@ -22,7 +22,6 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
  - Currently in progress...
 
 #### Manually
-iPowerShellCpuid contains a collection of PowerShell Cmdlets that allow us to obtain the CPUID information. Currently only works on windows
 
 |Step|Description|
 |:------|:------|
