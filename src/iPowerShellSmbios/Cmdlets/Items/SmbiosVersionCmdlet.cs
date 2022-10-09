@@ -1,10 +1,10 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-
     /// <summary>
     /// <para type="synopsis">Returns a value that contains the SMBIOS version of the system.</para>
     /// </summary>

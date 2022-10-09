@@ -1,12 +1,12 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using PowerShellSmbios.CmdLets.Results;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">
     /// Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed,
@@ -33,7 +33,7 @@ namespace PowerShellSmbios.CmdLets
     ///     Units        : None
     ///     Class        : Bios
     ///     FriendlyName : BIOS Version
-    ///     Desctiption  : String number of the BIOS Version
+    ///     Description  : String number of the BIOS Version
     /// 
     ///   </code>
     /// </example>
@@ -53,7 +53,7 @@ namespace PowerShellSmbios.CmdLets
     ///     Units        : None
     ///     Class        : BasicInformation
     ///     FriendlyName : System Manufacturer
-    ///     Desctiption  : System Manufacturer
+    ///     Description  : System Manufacturer
     /// 
     ///   </code>
     /// </example>
@@ -70,7 +70,7 @@ namespace PowerShellSmbios.CmdLets
     ///     Units        : None
     ///     Class        : MemoryDevice
     ///     FriendlyName : AssetTag
-    ///     Desctiption  : 
+    ///     Description  : 
     /// 
     ///   </code>
     /// </example>
@@ -111,7 +111,7 @@ namespace PowerShellSmbios.CmdLets
                     Units = Property.Key.PropertyUnit.ToString(),
                     Class = Property.Key.StructureId.ToString(),
                     FriendlyName = Property.Key.GetPropertyName(),
-                    Desctiption = Property.Key.GetPropertyDescription()
+                    Description = Property.Key.GetPropertyDescription()
                 });
         }
         #endregion

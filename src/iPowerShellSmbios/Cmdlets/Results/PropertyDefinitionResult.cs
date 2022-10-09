@@ -1,11 +1,11 @@
 ﻿
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Dmi;
+
 namespace PowerShellSmbios.CmdLets.Results
 {
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Dmi;
-
     /// <summary>
     /// Class that defines the location of a <see cref="SMBIOS"/> property.
     /// </summary>

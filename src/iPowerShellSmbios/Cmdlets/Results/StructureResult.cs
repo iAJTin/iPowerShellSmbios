@@ -1,8 +1,8 @@
 ﻿
+using iTin.Hardware.Specification.Dmi;
+
 namespace PowerShellSmbios.CmdLets.Results
 {
-    using iTin.Hardware.Specification.Dmi;
-
     /// <summary>
     /// Class that defines the a SMBIOS structure.
     /// </summary>

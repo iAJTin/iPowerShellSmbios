@@ -53,7 +53,7 @@ Value        :
 Units        : None
 Class        : MemoryDevice
 FriendlyName : AssetTag
-Desctiption  :
+Description  :
 
 ```
 

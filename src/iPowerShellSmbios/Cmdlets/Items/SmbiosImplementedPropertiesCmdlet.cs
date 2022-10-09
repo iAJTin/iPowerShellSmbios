@@ -1,16 +1,16 @@
 ﻿
+using System.Collections.Generic;
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Dmi;
+
+using PowerShellSmbios.CmdLets.Results;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System.Collections.Generic;
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Dmi;
-
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">Returns a collection of elements where each element represents an implemented property for given strucutre class.</para>
     /// <para type="description">The elements are suitable to be used in the 'Get-SmbiosProperty' operation as an input parameter of the '-Property' parameter.</para>

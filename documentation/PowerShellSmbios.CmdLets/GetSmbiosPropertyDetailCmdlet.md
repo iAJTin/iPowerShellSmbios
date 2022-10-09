@@ -38,7 +38,7 @@ Value        : 16.0.1 (48919)
 Units        : None
 Class        : Bios
 FriendlyName : BIOS Version
-Desctiption  : String number of the BIOS Version
+Description  : String number of the BIOS Version
 
 ```
 
@@ -57,7 +57,7 @@ Value        : Parallels Software International Inc.
 Units        : None
 Class        : BasicInformation
 FriendlyName : System Manufacturer
-Desctiption  : System Manufacturer
+Description  : System Manufacturer
 
 ```
 
@@ -73,7 +73,7 @@ Value        :
 Units        : None
 Class        : MemoryDevice
 FriendlyName : AssetTag
-Desctiption  : 
+Description  : 
 
 ```
 

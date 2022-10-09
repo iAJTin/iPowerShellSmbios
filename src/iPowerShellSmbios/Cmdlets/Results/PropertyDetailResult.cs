@@ -1,8 +1,8 @@
 ﻿
+using iTin.Hardware.Specification;
+
 namespace PowerShellSmbios.CmdLets.Results
 {
-    using iTin.Hardware.Specification;
-
     /// <summary>
     /// Class that defines the detail of a <see cref="SMBIOS"/> property.
     /// </summary>
@@ -60,6 +60,6 @@ namespace PowerShellSmbios.CmdLets.Results
         /// <value>
         /// Property description.
         /// </value>
-        public string Desctiption { get; set; }
+        public string Description { get; set; }
     }
 }

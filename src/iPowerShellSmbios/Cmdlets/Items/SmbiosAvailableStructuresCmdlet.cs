@@ -1,15 +1,15 @@
 ﻿
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Management.Automation;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Dmi;
+
+using PowerShellSmbios.CmdLets.Results;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System.Collections.ObjectModel;
-    using System.Linq;
-    using System.Management.Automation;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Dmi;
-
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">Returns a collection of elements where each element represents an available SMBIOS structure.</para>
     /// </summary>

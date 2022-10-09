@@ -1,18 +1,18 @@
 ﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Dmi;
+
+using PowerShellSmbios.CmdLets.Results;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Dmi;
-    
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">
     /// Returns a value that contains the location or locations of the SMBIOS property by its name.

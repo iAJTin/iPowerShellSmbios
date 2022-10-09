@@ -1,15 +1,15 @@
 ﻿
+using System.Management.Automation;
+
+using iTin.Core.Hardware.Common;
+
+using iTin.Hardware.Specification;
+using iTin.Hardware.Specification.Dmi;
+
+using PowerShellSmbios.CmdLets.Results;
+
 namespace PowerShellSmbios.CmdLets
 {
-    using System.Management.Automation;
-
-    using iTin.Core.Hardware.Common;
-
-    using iTin.Hardware.Specification;
-    using iTin.Hardware.Specification.Dmi;
-
-    using Results;
-
     /// <summary>
     /// <para type="synopsis">
     /// Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value.
@@ -51,7 +51,7 @@ namespace PowerShellSmbios.CmdLets
     ///     Units        : None
     ///     Class        : MemoryDevice
     ///     FriendlyName : AssetTag
-    ///     Desctiption  :
+    ///     Description  :
     /// 
     ///   </code>
     /// </example>
@@ -90,7 +90,7 @@ namespace PowerShellSmbios.CmdLets
             DmiClass element = structure.Elements[Property.Index];
             QueryPropertyResult propertyResult = element.GetProperty(Property.PropertyKey);
 
-            WriteObject(propertyResult.Value);
+            WriteObject(propertyResult.Result);
         }
         #endregion
 

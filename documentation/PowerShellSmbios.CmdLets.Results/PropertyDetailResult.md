@@ -12,7 +12,7 @@ public class PropertyDetailResult
 | --- | --- |
 | [PropertyDetailResult](PropertyDetailResult/PropertyDetailResult.md)() | The default constructor. |
 | [Class](PropertyDetailResult/Class.md) { get; set; } | Gets or sets a value that contains the structure class name to which this property belongs. |
-| [Desctiption](PropertyDetailResult/Desctiption.md) { get; set; } | Gets or sets a value that contains the property description. |
+| [Description](PropertyDetailResult/Description.md) { get; set; } | Gets or sets a value that contains the property description. |
 | [FriendlyName](PropertyDetailResult/FriendlyName.md) { get; set; } | Gets or sets a value that contains the friendly property name. |
 | [Name](PropertyDetailResult/Name.md) { get; set; } | Gets or sets a value that contains the property name. |
 | [Units](PropertyDetailResult/Units.md) { get; set; } | Gets a value that contains the property units. |
