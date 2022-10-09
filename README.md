@@ -29,7 +29,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 |2|Copy the contents of the output folder ```Release``` or ```Debug``` into the folder created in the previous step. ```%programfiles%\WindowsPowerShell\Modules\iPowerShellSmbios```.|
 |3|Run Windows PowerShell|
 |4|For import **iPowerShellSmbios** module, please enter the following command: ```PS> Import-Module iPowerShellSmbios```|
-|5|Now try to get the information of available commands, please nter the following command: ```PS> Get-Help Smbios```|
+|5|Now try to get the information of available commands, please enter the following command: ```PS> Get-Help Smbios```|
 |6|Now to check that everything is correct, let's check the [SMBIOS] version, please enter the following command: ```PS> Get-SmbiosVersion``` or if you prefer, use its alias ```SMBIOS-Version```|
 |7|In both cases, in both cases we must obtain a response value, if this is so, perfect is already installed!!|
 |8|Enjoy ;)| 
