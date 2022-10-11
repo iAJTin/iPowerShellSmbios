@@ -35,7 +35,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
   </tr>
 </table>
 
-- From package manager console
+#### CLI Console
 
 ```PM> Install-Module -Name iPowerShellSmbios```
 
