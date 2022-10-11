@@ -19,9 +19,27 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 
 #### PowerShellGallery
 
- - Currently in progress...
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/iAJTin/iPowerShellSmbios">
+        <img src="https://img.shields.io/badge/-iPowerShellSmbios-green.svg?style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://www.powershellgallery.com/packages/iPowerShellSmbios/1.0.0.0">
+        <img alt="PowerShellGallery Version" 
+             src="https://img.shields.io/powershell/v/iPowerShellSmbios.svg" /> 
+      </a>
+    </td>  
+  </tr>
+</table>
 
-#### Manually
+- From package manager console
+
+```PM> Install-Module -Name iPowerShellSmbios```
+
+#### Locally
 
 |Step|Description|
 |:------|:------|
