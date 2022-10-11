@@ -27,7 +27,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
       </a>
     </td>
     <td>
-      <a href="https://www.powershellgallery.com/packages/iPowerShellSmbios/1.0.0.0">
+      <a href="https://www.powershellgallery.com/packages/iPowerShellSmbios/">
         <img alt="PowerShellGallery Version" 
              src="https://img.shields.io/powershellgallery/v/iPowerShellSmbios.svg?style=flat-square&label=iPowerShellSmbios" /> 
       </a>
