@@ -4,7 +4,6 @@ using System.Linq;
 using System.Management.Automation;
 
 using iTin.Hardware.Specification;
-using iTin.Hardware.Specification.Dmi;
 
 using PowerShellSmbios.CmdLets.Results;
 
@@ -47,8 +46,8 @@ namespace PowerShellSmbios.CmdLets
         protected override void ProcessRecord()
         {
             var result = new Collection<StructureResult>();
-            DmiStructureCollection structures = DMI.CreateInstance().Structures;
-            foreach (DmiStructure structure in structures)
+            var structures = DMI.CreateInstance().Structures;
+            foreach (var structure in structures)
             {
                 result.Add(
                     new StructureResult
