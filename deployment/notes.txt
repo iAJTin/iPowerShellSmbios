@@ -1,0 +1,37 @@
+
+Error
+------
+ - Ver este enlace https://www.undocumented-features.com/2021/02/03/resolving-publish-psartifactutility-failed-to-generate-the-compressed-file-for-script-cprogram-filesdotnetdotnet-exe-failed-to-pack-error/
+
+ - Ejecutar este comando para actualizar nuget.exe
+
+   Invoke-WebRequest -Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile "$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\PowerShellGet\NuGet.exe"
+
+
+Files to copy in version folder
+-------------------------------
+
+Remove-Item $modulePath -Force -Recurse
+New-Item $modulePath -ItemType Directory -Force | Out-Null
+Copy-Item (Join-Path $releasePath "iPowerShellSmbios.dll") (Join-Path $modulePath "iPowerShellSmbios.dll")
+Copy-Item (Join-Path $releasePath "iPowerShellSmbios.dll-Help.xml") (Join-Path $modulePath "iPowerShellSmbios.dll-Help.xml")
+Copy-Item (Join-Path $releasePath "iPowerShellSmbios.xml") (Join-Path $modulePath "iPowerShellSmbios.xml")
+Copy-Item (Join-Path $releasePath "iTin.Core.dll") (Join-Path $modulePath "iTin.Core.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Hardware.Common.dll") (Join-Path $modulePath "iTin.Core.Hardware.Common.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Hardware.Linux.Specification.Smbios.dll") (Join-Path $modulePath "iTin.Core.Hardware.Linux.Specification.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Hardware.MacOS.Specification.Smbios.dll") (Join-Path $modulePath "iTin.Core.Hardware.MacOS.Specification.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Hardware.Windows.Specification.Smbios.dll") (Join-Path $modulePath "iTin.Core.Hardware.Windows.Specification.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Interop.Shared.dll") (Join-Path $modulePath "iTin.Core.Interop.Shared.dll")
+Copy-Item (Join-Path $releasePath "iTin.Core.Interop.Windows.Smbios.dll") (Join-Path $modulePath "iTin.Core.Interop.Windows.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Hardware.Abstractions.Specification.Smbios.dll") (Join-Path $modulePath "iTin.Hardware.Abstractions.Specification.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Hardware.Specification.Dmi.dll") (Join-Path $modulePath "iTin.Hardware.Specification.Dmi.dll")
+Copy-Item (Join-Path $releasePath "iTin.Hardware.Specification.Smbios.dll") (Join-Path $modulePath "iTin.Hardware.Specification.Smbios.dll")
+Copy-Item (Join-Path $releasePath "iTin.Hardware.Specification.Tpm.dll") (Join-Path $modulePath "iTin.Hardware.Specification.Tpm.dll")
+Copy-Item (Join-Path $releasePath "iTin.Logging.dll") (Join-Path $modulePath "iTin.Logging.dll")
+Copy-Item (Join-Path $releasePath "System.CodeDom.dll") (Join-Path $modulePath "System.CodeDom.dll")
+Copy-Item (Join-Path $releasePath "System.Management.Automation.dll") (Join-Path $modulePath "System.Management.Automation.dll")
+Copy-Item (Join-Path $releasePath "System.Runtime.InteropServices.RuntimeInformation.dll") (Join-Path $modulePath "System.Runtime.InteropServices.RuntimeInformation.dll")
+Copy-Item (Join-Path $PSScriptRoot "iPowerShellSmbios.psd1") (Join-Path $modulePath "iPowerShellSmbios.psd1")
+
+Write-Host "Publishing module"
+
