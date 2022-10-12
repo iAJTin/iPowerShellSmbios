@@ -39,7 +39,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 
 ```PM> Install-Module -Name iPowerShellSmbios```
 
-#### Locally
+# Install Locally
 
 |Step|Description|
 |:------|:------|
