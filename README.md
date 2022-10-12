@@ -17,7 +17,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 
 # Install via PowerShellGallery
 
-· From PowerShellGallery
+- From PowerShellGallery
 
 <table>
   <tr>
@@ -35,7 +35,7 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
   </tr>
 </table>
 
-· From package manager console
+- From package manager console
 
 ```PM> Install-Module -Name iPowerShellSmbios```
 
