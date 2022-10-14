@@ -21,7 +21,7 @@ ModuleVersion = '1.0.0'
 GUID = '011565d5-38a6-4522-accd-fac04d617222'
        
 # Autor de este módulo.
-Author = 'fdogarciavega'
+Author = 'iTin'
 
 # Compañía o proveedor de este módulo.
 CompanyName = 'iTin'

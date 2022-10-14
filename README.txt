@@ -30,8 +30,7 @@ Added
 Install via PowerShellGallery
 =============================
 
-In progress..
-
+For more information, please see https://www.powershellgallery.com/packages/iPowerShellSmbios/1.0.0.0
 
 Usage
 =====
