@@ -13,7 +13,7 @@
 
 iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us to obtain the [SMBIOS] information.
 
-**Currently works fully on windows, It has partial support on macos and linux support is still pending development.**
+**Currently works fully on Windows, It has partial support on MacOS and Linux support is still pending development.**
 
 To check the currently supported **cmdlets**, please see the following [link](#System-support-for-current-CmdLets)
 
