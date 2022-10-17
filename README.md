@@ -69,6 +69,10 @@ Below is a table containing the commands supported by the various systems
 | Get-SmbiosProperty | OK | --- | --- |
 | Get-SmbiosPropertyDetail| OK | --- | --- |
 
+Where:
+
+    (---): Work in progress.
+
 # Usage
 
 ## Examples
