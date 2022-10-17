@@ -13,7 +13,9 @@
 
 iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us to obtain the [SMBIOS] information.
 
-**Currently only works on windows**
+**Currently works fully on windows, It has partial support on macos and linux support is still pending development.**
+
+To check the currently supported **cmdlets**, please see the following [link](#System-support-for-current-CmdLets)
 
 # Install via PowerShellGallery
 
@@ -41,6 +43,8 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 
 # Install Locally
 
+### Windows
+
 |Step|Description|
 |:------|:------|
 |1|Create the ```iPowerShellSmbios``` folder in ```%programfiles%\WindowsPowerShell\Modules```|
@@ -51,6 +55,19 @@ iPowerShellSmbios contains a collection of **PowerShell Cmdlets** that allow us 
 |6|Now to check that everything is correct, let's check the [SMBIOS] version, please enter the following command: ```PS> Get-SmbiosVersion``` or if you prefer, use its alias ```SMBIOS-Version```|
 |7|In both cases, in both cases we must obtain a response value, if this is so, perfect is already installed!!|
 |8|Enjoy ;)| 
+
+# System support for current CmdLets
+
+Below is a table containing the commands supported by the various systems
+
+| Cmdlet | Windows | MacOS | Linux |
+|--------|---------|-------|-------|
+| Get-SmbiosVersion | OK | OK | --- |
+| Get-SmbiosAvailableStructures | OK | OK | --- |
+| Get-SmbiosImplementedProperties | OK | --- | --- |
+| Get-SmbiosLocateProperty | OK | --- | --- |
+| Get-SmbiosProperty | OK | --- | --- |
+| Get-SmbiosPropertyDetail| OK | --- | --- |
 
 # Usage
 
@@ -77,7 +94,8 @@ My email address is
 
 ![email.png][email] 
 
+
 [email]: ./assets/email.png "email"
+
 [SMBIOS]: https://github.com/iAJTin/iSMBIOS
 [documentation]: ./documentation/iPowerShellSmbios.md
-
