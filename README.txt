@@ -4,18 +4,41 @@ What is iPowerShellSmbios?
 
 iPowerShellSmbios contains a collection of PowerShell Cmdlets that allow us to obtain the SMBIOS information.
 
+Changes in this version (v1.0.1)
+================================
+
+· Changed
+  -------
+
+ - iSMBIOS library
+
+    •———————————————————————————————•
+    | Library   Version Description |
+    •———————————————————————————————•
+    | iSMBIOS   1.1.8   iSMBIOS     |
+    •———————————————————————————————•
+
 v1.0.0
 ======
 
-Added
+· Added
+  -----
+
+ - iSMBIOS library
+
+    •———————————————————————————————•
+    | Library   Version Description |
+    •———————————————————————————————•
+    | iSMBIOS   1.1.7   iSMBIOS     |
+    •———————————————————————————————•
 
  - Library versions for this version
 
--------------------------------------------------------------------------------------------------
-| Library                                   Version       Description                           |
--------------------------------------------------------------------------------------------------
-| iPowerShellSmbios                         1.0.0.0       SMBIOS PowerShell Cmdlets library     |
--------------------------------------------------------------------------------------------------
+    •—————————————————————————————————————————————————————————————————————————•
+    | Library               Version     Description                           |
+    •—————————————————————————————————————————————————————————————————————————•
+    | iPowerShellSmbios     1.0.0.0     SMBIOS PowerShell Cmdlets library     |
+    •—————————————————————————————————————————————————————————————————————————•
 
 - Solution structure, prepare solution structure to add future new specifications.
 
