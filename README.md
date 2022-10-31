@@ -39,7 +39,7 @@ To check the currently supported **cmdlets**, please see the following [link](#S
 
 - From package manager console
 
-```PM> Install-Module -Name iPowerShellSmbios```
+```PM> Install-Module -Name iPowerShellSmbios -scope CurrentUser -Force```
 
 # Install Locally
 
