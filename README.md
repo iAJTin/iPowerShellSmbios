@@ -21,21 +21,21 @@ To check the currently supported **cmdlets**, please see the following [link](#S
 
 - From PowerShellGallery
 
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/iAJTin/iPowerShellSmbios">
-        <img src="https://img.shields.io/badge/-iPowerShellSmbios-green.svg?style=flat"/>
-      </a>
-    </td>
-    <td>
-      <a href="https://www.powershellgallery.com/packages/iPowerShellSmbios/">
-        <img alt="PowerShellGallery Version" 
-             src="https://img.shields.io/powershellgallery/v/iPowerShellSmbios.svg?style=flat-square&label=iPowerShellSmbios" /> 
-      </a>
-    </td>  
-  </tr>
-</table>
+    <table>
+      <tr>
+        <td>
+          <a href="https://github.com/iAJTin/iPowerShellSmbios">
+            <img src="https://img.shields.io/badge/-iPowerShellSmbios-green.svg?style=flat"/>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.powershellgallery.com/packages/iPowerShellSmbios/">
+            <img alt="PowerShellGallery Version" 
+                 src="https://img.shields.io/powershellgallery/v/iPowerShellSmbios.svg?style=flat-square&label=iPowerShellSmbios" /> 
+          </a>
+        </td>  
+      </tr>
+    </table>
 
 - From package manager console
 
