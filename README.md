@@ -49,7 +49,7 @@ To check the currently supported **cmdlets**, please see the following [link](#S
 ### Windows
 
 |Step|Description|
-|:------|:------|
+|:------:|:------|
 |1|Create the ```iPowerShellSmbios``` folder in ```%programfiles%\WindowsPowerShell\Modules```|
 |2|Copy the contents of the output folder ```Release``` or ```Debug``` into the folder created in the previous step. ```%programfiles%\WindowsPowerShell\Modules\iPowerShellSmbios```.|
 |3|Run Windows PowerShell|
