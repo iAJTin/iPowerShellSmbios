@@ -41,8 +41,8 @@ To check the currently supported **cmdlets**, please see the following [link](#S
 
     | User | Command |
     |:-----|:--------|
-    | Administrator user |```PM> Install-Module -Name iPowerShellSmbios -Force``` |
-    | Current user |```PM> Install-Module -Name iPowerShellSmbios -scope CurrentUser -Force``` |
+    | Administrator user |```Install-Module -Name iPowerShellSmbios -Force``` |
+    | Current user |```Install-Module -Name iPowerShellSmbios -scope CurrentUser -Force``` |
 
 # Install Locally
 
