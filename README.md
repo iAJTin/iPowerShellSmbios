@@ -64,7 +64,7 @@ To check the currently supported **cmdlets**, please see the following [link](#S
 Below is a table containing the commands supported by the various systems
 
 | Cmdlet | Windows | MacOS | Linux |
-|--------|---------|-------|-------|
+|:-------|:-------:|:-----:|:-----:|
 | Get-SmbiosVersion | OK | OK | --- |
 | Get-SmbiosAvailableStructures | OK | OK | --- |
 | Get-SmbiosImplementedProperties | OK | --- | --- |
