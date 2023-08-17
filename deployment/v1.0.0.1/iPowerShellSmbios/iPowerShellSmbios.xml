@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iPowerShellSmbios</name>
+    </assembly>
+    <members>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosImplementedPropertiesCmdlet">
+             <summary>
+             <para type="synopsis">Returns a collection of elements where each element represents an implemented property for given strucutre class.</para>
+             <para type="description">The elements are suitable to be used in the 'Get-SmbiosProperty' operation as an input parameter of the '-Property' parameter.</para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the all implemented properties for the 'MemoryArrayMappedAddress' structure class.
+                 The search result returns a collection of objects with the property information.
+                 The data type of the elements of the collection is suitable to be used as an input value in the '-Property' parameter
+                 of the Get-SmbiosProperty operation.
+             
+                 PS> Get-SmbiosImplementedProperties -Class MemoryArrayMappedAddress | SMBIOS-Implemented-Properties -Class MemoryArrayMappedAddress
+             
+                 Class              : MemoryArrayMappedAddress
+                 ClassId            : 19
+                 HexadecimalClassId : 13
+                 ImplementedVersion : v21
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryArrayMappedAddress, Property = MemoryArrayHandle, Unit = None
+            
+                 Class              : MemoryArrayMappedAddress
+                 ClassId            : 19
+                 HexadecimalClassId : 13
+                 ImplementedVersion : v21
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryArrayMappedAddress, Property = PartitionWidth, Unit = None
+            
+                 Class              : MemoryArrayMappedAddress
+                 ClassId            : 19
+                 HexadecimalClassId : 13
+                 ImplementedVersion : v21
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryArrayMappedAddress, Property = StartingAddress, Unit = Bytes
+            
+                 Class              : MemoryArrayMappedAddress
+                 ClassId            : 19
+                 HexadecimalClassId : 13
+                 ImplementedVersion : v21
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryArrayMappedAddress, Property = EndingAddress, Unit = Bytes
+             
+               </code>
+             </example>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosImplementedPropertiesCmdlet.Class">
+            <summary>
+            Gets or sets a value that contains the name of the structure class.
+            <para type="description">Structure class name</para>
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Hardware.Specification.Dmi.DmiStructureClass"/> enumeration.
+            </value>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosImplementedPropertiesCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosPropertyCmdlet">
+             <summary>
+             <para type="synopsis">
+             Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value.
+             </para>
+             <para type="description">
+             The value of the property <b>Property</b> must be obtained by calling the <b>Get-SmbiosLocateProperty</b>, for more information see the help
+             for the <b>Get-SmbiosLocateProperty</b> and the sample examples below.
+             </para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+             
+                 How to get the value of the Vendor property?
+                 First we make a call to 'Get-SmbiosLocateProperty', to search among all the available properties of our system those that call 'Vendor' and
+                 then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information, remember that a property is made up of its key and its value.
+             
+                 PS> Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Vendor -Class Bios) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Vendor -Class Bios)
+            
+                 Key                                               Value
+                 ---                                               -----
+                  Structure = Bios, Property = Vendor, Unit = None Parallels Software International Inc.
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+             
+                 How to get the value of the AssetTag property of Memory device (4) ?
+                 First we make a call to 'Get-SmbiosLocateProperty', to search among all the available properties of our system those that call 'AssetTag' filtered to obtain
+                 the 5th element of the array (remember zero index in arrays) and then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information,
+                 remember that a property is made up of its key and its value.
+             
+                 PS> Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4)
+            
+                 Name         : AssetTag
+                 Value        :
+                 Units        : None
+                 Class        : MemoryDevice
+                 FriendlyName : AssetTag
+                 Description  :
+             
+               </code>
+             </example>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosPropertyCmdlet.Property">
+            <summary>
+            Gets or sets a value that contains the location property data.
+            <para type="description">A <see cref="T:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult"/> instance.</para>
+            </summary>
+            <value>
+            A <see cref="T:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult"/> reference that contains the location property data.
+            </value>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosPropertyCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosPropertyDetailCmdlet">
+             <summary>
+             <para type="synopsis">
+             Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed,
+             description and structure class to which it belongs.
+             </para>
+             <para type="description">
+             The value of the property <b>Property</b> must be obtained by calling the <b>Get-SmbiosProperty</b>, for more information see the help
+             for the <b>Get-SmbiosProperty</b> and the sample examples below.
+             </para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 How to get the value of the 'BiosVersion' property of the 'Bios' class ?.
+                 To do this, first by calling 'Get-SmbiosLocateProperty', we search among all the available properties of our system for those that call 'BiosVersion'
+                 and then with the result obtained, the 'Get-SmbiosProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+                 Finally we call 'Get-SmbiosPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
+             
+                 PS> Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name BiosVersion)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name BiosVersion))
+            
+                 Name         : BiosVersion
+                 Value        : 16.0.1 (48919)
+                 Units        : None
+                 Class        : Bios
+                 FriendlyName : BIOS Version
+                 Description  : String number of the BIOS Version
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 How to get the value of the 'Manufacturer' property of the 'System' class ?.
+                 To do this, first by calling 'Get-SmbiosLocateProperty', we search among all the available properties of our system for those that call 'Manufacturer' and belongs to 'System' structure class
+                 and then with the result obtained, the 'Get-SmbiosProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+                 Finally we call 'Get-SmbiosPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
+             
+                 PS> Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Manufacturer -Class System)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Manufacturer -Class System))
+            
+                 Name         : Manufacturer
+                 Value        : Parallels Software International Inc.
+                 Units        : None
+                 Class        : BasicInformation
+                 FriendlyName : System Manufacturer
+                 Description  : System Manufacturer
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 How to get the value of the 'AssetTag' property, but only element 4 of the 'MemoryDevice' structure class ?.
+             
+                 PS> Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4))
+            
+                 Name         : AssetTag
+                 Value        : 
+                 Units        : None
+                 Class        : MemoryDevice
+                 FriendlyName : AssetTag
+                 Description  : 
+             
+               </code>
+             </example>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosPropertyDetailCmdlet.Property">
+            <summary>
+            Gets or sets a value that contains the property information.
+            <para type="description">A <see cref="T:iTin.Core.Hardware.Common.PropertyItem"/> instance.</para>
+            </summary>
+            <value>
+            A <see cref="T:iTin.Core.Hardware.Common.PropertyItem"/> reference that contains the property information.
+            </value>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosPropertyDetailCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosAvailableStructuresCmdlet">
+             <summary>
+             <para type="synopsis">Returns a collection of elements where each element represents an available SMBIOS structure.</para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 PS> Get-SmbiosAvailableStructures | SMBIOS-Available-Structures
+             
+                                    Class ClassId HexadecimalClassId
+                                    ----- ------- ------------------
+                                     Bios       0 00
+                                   System       1 01
+                                BaseBoard       2 02
+                          SystemEnclosure       3 03
+                                Processor       4 04
+                              SystemSlots       9 09
+                           OnBoardDevices      10 0A
+                      PhysicalMemoryArray      16 10
+                             MemoryDevice      17 11
+                 MemoryArrayMappedAddress      19 13
+                               SystemBoot      32 20
+                               EndOfTable     127 7F
+             
+             </code>
+            </example>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosAvailableStructuresCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosLocatePropertyCmdlet">
+             <summary>
+             <para type="synopsis">
+             Returns a value that contains the location or locations of the SMBIOS property by its name.
+             </para>
+             <para type="description"> 
+             If you get multiple results you can filter the result indicating the specific structure class and index into collection. For more information, please see the examples below.
+             </para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the location of the 'BiosVersion' property.
+                 The result of the search tells us that it belongs to the 'Bios' structure class and the implemented structure version in this system is v24,
+                 additionally the 'Structure' property stores the key that identifies this property.
+             
+                 Notice, as it only returns one element.
+             
+                 PS> Get-SmbiosLocateProperty -Name BiosVersion | SMBIOS-Locate-Property -Name BiosVersion
+            
+                 Class              : Bios
+                 ClassId            : 0
+                 HexadecimalClassId : 00
+                 ImplementedVersion : v24
+                 Index              : 0
+                 PropertyKey        : Structure = Bios, Property = BiosVersion, Unit = None
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the location of the 'AssetTag' property.
+                 The search result tells us that it belongs to 'BaseBoard', 'Processor' and a collection of 'Memory Device'.
+             
+                 Notice, as it now returns an array containing the matches
+             
+                 PS> Get-SmbiosLocateProperty -Name AssetTag | SMBIOS-Locate-Property -Name AssetTag
+            
+                 Class              : BaseBoard
+                 ClassId            : 2
+                 HexadecimalClassId : 02
+                 ImplementedVersion : Latest
+                 Index              : 0
+                 PropertyKey        : Structure = BaseBoard, Property = AssetTag, Unit = None
+            
+                 Class              : Processor
+                 ClassId            : 4
+                 HexadecimalClassId : 04
+                 ImplementedVersion : v23
+                 Index              : 0
+                 PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 1
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 2
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 3
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 4
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 5
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                  Class              : MemoryDevice
+                  ClassId            : 17
+                  HexadecimalClassId : 11
+                  ImplementedVersion : v27
+                  Index              : 6
+                  PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+            
+                  Class              : MemoryDevice
+                  ClassId            : 17
+                  HexadecimalClassId : 11
+                  ImplementedVersion : v27
+                  Index              : 7
+                  PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the location of the property 'AssetTag' but only that of structure class 'Processor'.
+            
+                 Notice, as it only returns one element.
+             
+                 PS>  Get-SmbiosLocateProperty -Name AssetTag -Class Processor | SMBIOS-Locate-Property -Name AssetTag -Class Processor
+            
+                 Class              : Processor
+                 ClassId            : 4
+                 HexadecimalClassId : 04
+                 ImplementedVersion : v23
+                 Index              : 0
+                 PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the location of the 'AssetTag' property but only those whose index is '0' (the first element).
+             
+                 Notice, as it now returns an array containing the matches
+             
+                 PS> Get-SmbiosLocateProperty -Name AssetTag -Index 0 | SMBIOS-Locate-Property -Name AssetTag -Index 0
+            
+                 Class              : BaseBoard
+                 ClassId            : 2
+                 HexadecimalClassId : 02
+                 ImplementedVersion : Latest
+                 Index              : 0
+                 PropertyKey        : Structure = BaseBoard, Property = AssetTag, Unit = None
+            
+                 Class              : Processor
+                 ClassId            : 4
+                 HexadecimalClassId : 04
+                 ImplementedVersion : v23
+                 Index              : 0
+                 PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 0
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+             
+               </code>
+             </example>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+            
+                 The following example shows how to get the location of the 'AssetTag' property, but only element 4 of the 'MemoryDevice' structure class.
+             
+                 Notice, as it only returns one element.
+             
+                 PS> Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4 | SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4
+            
+                 Class              : MemoryDevice
+                 ClassId            : 17
+                 HexadecimalClassId : 11
+                 ImplementedVersion : v27
+                 Index              : 4
+                 PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+             
+               </code>
+            </example>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosLocatePropertyCmdlet.Name">
+            <summary>
+            Gets or sets a value that contains the name of the property to locate.
+            <para type="description">The property name to locate.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the name of the property to locate.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosLocatePropertyCmdlet.Class">
+            <summary>
+            Gets or sets a value that contains the name of the structure class to which this property belongs. This value is optional.
+            <para type="description">Optional structure class name</para>
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Hardware.Specification.Dmi.DmiStructureClass"/> enumeration.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.GetSmbiosLocatePropertyCmdlet.Index">
+            <summary>
+            Gets or sets a value that contains the index of element in the collection. This value is optional.
+            <para type="description">Optional index of element in the collection</para>
+            </summary>
+            <value>
+            Element index collection
+            </value>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosLocatePropertyCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.GetSmbiosVersionCmdlet">
+             <summary>
+             <para type="synopsis">Returns a value that contains the SMBIOS version of the system.</para>
+             </summary>
+             <example>
+               <code>
+                 The output may be different (depending on your system)!!!
+             
+                 PS> Get-SmbiosVersion | SMBIOS-Version
+                 207
+             
+               </code>
+            </example>
+        </member>
+        <member name="M:PowerShellSmbios.CmdLets.GetSmbiosVersionCmdlet.ProcessRecord">
+            <summary>
+            Process the command.
+            </summary>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.Results.PropertyDetailResult">
+            <summary>
+            Class that defines the detail of a <see cref="T:iTin.Hardware.Specification.SMBIOS"/> property.
+            </summary>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.Name">
+            <summary>
+            Gets or sets a value that contains the property name.
+            <para type="description">Property name.</para>
+            </summary>
+            <value>
+            Property name.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.Value">
+            <summary>
+            Gets or sets a value that contains the property value.
+            <para type="description">Property value.</para>
+            </summary>
+            <value>
+            Property value.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.Units">
+            <summary>
+            Gets a value that contains the property units.
+            <para type="description">Property units.</para>
+            </summary>
+            <value>
+            Property units.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.Class">
+            <summary>
+            Gets or sets a value that contains the structure class name to which this property belongs.
+            <para type="description">Structure class name to which this property belongs.</para>
+            </summary>
+            <value>
+            Structure class name to which this property belongs.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.FriendlyName">
+            <summary>
+            Gets or sets a value that contains the friendly property name.
+            <para type="description">Friendly property name.</para>
+            </summary>
+            <value>
+            Friendly property name.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDetailResult.Description">
+            <summary>
+            Gets or sets a value that contains the property description.
+            <para type="description">Property description.</para>
+            </summary>
+            <value>
+            Property description.
+            </value>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult">
+            <summary>
+            Class that defines the location of a <see cref="T:iTin.Hardware.Specification.SMBIOS"/> property.
+            </summary>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.Class">
+            <summary>
+            Gets or sets a value that represents a structure class.
+            <para type="description">Name of the structure class.</para>
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Hardware.Specification.Dmi.DmiStructureClass"/> enumeration.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.ClassId">
+            <summary>
+            Gets a value that contains the numeric representation of the structure class.
+            <para type="description">Numeric representation of the structure class.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.Int32"/> that contains the numeric representation of the structure class.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.HexadecimalClassId">
+            <summary>
+            Gets a value that contains the hexadecimal representation of the structure class.
+            <para type="description">Hexadecimal representation of the structure class.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the hexadecimal representation of the structure class.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.ImplementedVersion">
+            <summary>
+            Gets a value that contains the hexadecimal representation of the structure class to which this property belongs.
+            <para type="description">Hexadecimal representation of the structure class to which this property belongs.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the hexadecimal representation of the structure class.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.Index">
+            <summary>
+            Gets a value that contains the hexadecimal representation of the structure class to which this property belongs.
+            <para type="description">Hexadecimal representation of the structure class to which this property belongs.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the hexadecimal representation of the structure class.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult.PropertyKey">
+            <summary>
+            Gets or sets a value containing key that represents the property.
+            <para type="description">Key that represents the property.</para>
+            </summary>
+            <value>
+            An instance that implements the <see cref="T:iTin.Core.Hardware.Common.IPropertyKey"/> interface that represents the key of the property.
+            </value>
+        </member>
+        <member name="T:PowerShellSmbios.CmdLets.Results.StructureResult">
+            <summary>
+            Class that defines the a SMBIOS structure.
+            </summary>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.StructureResult.Class">
+            <summary>
+            Gets or sets a value that represents a structure class.
+            <para type="description">Name of the structure class.</para>
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Hardware.Specification.Dmi.DmiStructureClass"/> enumeration.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.StructureResult.ClassId">
+            <summary>
+            Gets a value that contains the numeric representation of the structure class.
+            <para type="description">Numeric representation of the structure class.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.Int32"/> that contains the numeric representation of the structure class.
+            </value>
+        </member>
+        <member name="P:PowerShellSmbios.CmdLets.Results.StructureResult.HexadecimalClassId">
+            <summary>
+            Gets a value that contains the hexadecimal representation of the structure class.
+            <para type="description">Hexadecimal representation of the structure class.</para>
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the hexadecimal representation of the structure class.
+            </value>
+        </member>
+    </members>
+</doc>

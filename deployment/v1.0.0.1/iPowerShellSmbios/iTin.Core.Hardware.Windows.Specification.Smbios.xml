@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Core.Hardware.Windows.Specification.Smbios</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Core.Hardware.Windows.Specification.Smbios.Firmware">
+            <summary>
+            Methods for handle system firmware tables.
+            Based on <c>open-hardware-monitor</c> project, for more info, please see: https://searchcode.com/codesearch/view/3147305/ [Michael Möller].
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Hardware.Windows.Specification.Smbios.Firmware.EnumerateTables(iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider)">
+            <summary>
+            Returns an array that contains the tables associated with the specified provider.
+            </summary>
+            <param name="provider">Table provider</param>
+            <returns>
+            Tables associated with the specified provider
+            </returns>
+        </member>
+        <member name="M:iTin.Core.Hardware.Windows.Specification.Smbios.Firmware.GetTable(iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider,System.String)">
+            <summary>
+            Returns raw data from the specified provider table.
+            </summary>
+            <param name="provider">Table provider</param>
+            <param name="table">Table name</param>
+            <returns>
+            Raw data for specified table.
+            </returns>
+        </member>
+        <member name="M:iTin.Core.Hardware.Windows.Specification.Smbios.Firmware.GetTable(iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider,System.Int32)">
+            <summary>
+            Returns raw data from the specified provider table.
+            </summary>
+            <param name="provider">Table provider</param>
+            <param name="table">Table name</param>
+            <returns>
+            Raw data for specified table.
+            </returns>
+        </member>
+        <member name="T:iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider">
+            <summary>
+            Defines firmware tables
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider.ACPI">
+            <summary>
+            'ACPI' table
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider.FIRM">
+            <summary>
+            'FIRM' table
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Hardware.Windows.Specification.Smbios.FirmwareProvider.RSMB">
+            <summary>
+            'RSMB' table
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Hardware.Windows.Specification.Smbios.SmbiosOperations">
+            <summary>
+            Specialization of the <see cref="T:iTin.Core.Hardware.Abstractions.Specification.Smbios.ISmbiosOperations"/> interface that contains the <b>SMBIOS</b> operations for <b>Windows</b> system.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Hardware.Windows.Specification.Smbios.SmbiosOperations.GetSmbiosDataArray(iTin.Core.Hardware.Abstractions.Specification.Smbios.ISmbiosConnectOptions)">
+            <summary>
+            Gets a value containing the raw <b>SMBIOS</b> data.
+            </summary>
+            <param name="options">Connection options for remote use</param>
+            <returns>
+            The raw <b>SMBIOS</b> data.
+            </returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Hardware.Specification.Tpm</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId">
+            <summary>
+            Represents <b>TPM Capabilities Vendor ID (CAP_VID)</b>.
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.AMD">
+            <summary>
+            AMD
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Atmel">
+            <summary>
+            Atmel
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Broadcom">
+            <summary>
+            Broadcom
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.HPE">
+            <summary>
+            HPE
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.IBM">
+            <summary>
+            IBM
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Infineon">
+            <summary>
+            Infineon
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Intel">
+            <summary>
+            Intel
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Lenovo">
+            <summary>
+            Lenovo
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Microsoft">
+            <summary>
+            Microsoft
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.NationalSemiconductor">
+            <summary>
+            National Semiconductor
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Nationz">
+            <summary>
+            Nationz
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.NuvotonTechnology">
+            <summary>
+            Nuvoton Technology
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Qualcomm">
+            <summary>
+            Qualcomm
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.SMSC">
+            <summary>
+            SMSC
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.STMicroelectronics">
+            <summary>
+            ST Microelectronics
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Samsung">
+            <summary>
+            Samsung
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Sinosun">
+            <summary>
+            Sinosun
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.TexasInstruments">
+            <summary>
+            Texas Instruments
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Winbond">
+            <summary>
+            Winbond
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.FuzhouRockchip">
+            <summary>
+            Fuzhou Rockchip
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Google">
+            <summary>
+            Google
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.ASCII">
+            <summary>
+            Gets or sets a value representing the informative representation of the normative hexadecimal value
+            </summary>
+            <value>
+            Informative representation of the normative hexadecimal value.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Description">
+            <summary>
+            Gets or sets a value representing Vendor Id description.
+            </summary>
+            <value>
+            Vendor Id as hexadecimal.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmCapabilityVendorId.Hex">
+            <summary>
+            Gets or sets a value representing Vendor Id as hexadecimal.
+            </summary>
+            <value>
+            Vendor Id as hexadecimal.
+            </value>
+        </member>
+        <member name="T:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion">
+            <summary>
+            Represents <b>TPM</b> firmware version.
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.Unknown">
+            <summary>
+            Gets a <see cref="T:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion"/> reference with all field set to minus one (-1).
+            </summary>
+            <value>
+            An empty <see cref="T:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion"/> reference. All values sets to zero (0)
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.IsUnknownVersion">
+            <summary>
+            Gets a value indicating whether this instance is unknown version.
+            </summary>
+            <value>
+            <b>true</b> if this <b>TpmFirmwareVersion</b> instance has a unknown version  contains the default; otherwise, <b>false</b>.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.MajorVersion">
+            <summary>
+            Gets or sets a value representing firmware major version.
+            </summary>
+            <value>
+            Firmware major version.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.MinorVersion">
+            <summary>
+            Gets or sets a value representing firmware minor version.
+            </summary>
+            <value>
+            Firmware minor version.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.MajorRevision">
+            <summary>
+            Gets or sets a value representing firmware major revision, this value is usually the manufacturer's major revision.
+            </summary>
+            <value>
+            Firmware major revision.
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.MinorRevision">
+            <summary>
+            Gets or sets a value representing firmware minor revision, this value is usually the manufacturer's minor revision.
+            </summary>
+            <value>
+            Firmware minor revision.
+            </value>
+        </member>
+        <member name="M:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.Parse(System.Byte[])">
+            <summary>
+            Parses firmware version raw data, valid only for <b>Firmware Spec Version 1</b>.
+            </summary>
+            <param name="rawBytes">Target data to analyze</param>
+            <returns>
+            A <see cref="T:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion"/> reference that contains the firmware version.
+            </returns>
+        </member>
+        <member name="M:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion.ToString">
+            <summary>
+            Returns a class <see cref="T:System.String"/> that represents the current object.
+            </summary>
+            <returns>
+            Object <see cref="T:System.String"/> that represents the current <see cref="T:iTin.Hardware.Specification.Tpm.TpmFirmwareVersion"/> class.
+            </returns>
+        </member>
+    </members>
+</doc>

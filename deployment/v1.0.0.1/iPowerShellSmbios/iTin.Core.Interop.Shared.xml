@@ -1,0 +1,2964 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Core.Interop.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Core.Interop.Shared.CrossPlatform.ExternDll">
+            <summary>
+            Defines dll names
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.CrossPlatform.ExternDll.Cpuid">
+            <summary>
+            Cpuid dll
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants">
+            <summary>
+            Defines known constants
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.DEV">
+            <summary>
+            DEV
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.DEV.MEM">
+            <summary>
+            /dev/mem 
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.ETC">
+            <summary>
+            ETC
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.ETC.OS_RELEASE">
+            <summary>
+            /etc/os-release
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.PROC">
+            <summary>
+            PROC
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.PROC.NET">
+            <summary>
+            /proc/net
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.PROC.NET.DEV">
+            <summary>
+            /proc/net/dev
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.PROC.MEMINFO">
+            <summary>
+            /proc/meminfo
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.PROC.CPUINFO">
+            <summary>
+            /proc/cpuinfo 
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.PROC.STAT">
+            <summary>
+            /proc/stat
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.SYS">
+            <summary>
+            SYS
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.SYS.CLASS">
+            <summary>
+            /sys/class
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Linux.Constants.SYS.CLASS.POWER_SUPPLY">
+            <summary>
+            /sys/class/power_supply
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.SYS.CLASS.POWER_SUPPLY.BAT0">
+            <summary>
+            /sys/class/power_supply/bat0
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Linux.Constants.SYS.CLASS.DMI">
+            <summary>
+            /sys/class/dmi
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.MacOS.Command">
+            <summary>
+            Defines library names
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.MacOS.Command.IoReg">
+            <summary>
+            IoReg program
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.MacOS.Command.SwVers">
+            <summary>
+            sw_vers program
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.MacOS.Command.Pmset">
+            <summary>
+            pmset program
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.MacOS.Command.Sysctl">
+            <summary>
+            sysctl program
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.MacOS.ExternDll">
+            <summary>
+            Defines library names
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.MacOS.ExternDll.Libc">
+            <summary>
+            libc library
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.Constants">
+            <summary>
+            Defines known constants
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Constants.MAX_PATH">
+            <summary>
+            Max path lenght.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Constants.IOCTL_DISK_BASE">
+            <summary>
+            Base code for device control codes.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Constants.IOCTL_SCSI_BASE">
+            <summary>
+            Base code for storage device control codes.
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.DeviceControlCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_BASE">
+            <summary>
+            Código base para los códigos de control de disco.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_DRIVE_GEOMETRY">
+            <summary>
+            Recupera la información acerca de la geometría del disco físico: tipo, número de cilindros, pistas por cilindro, sectores por pista y bytes por sector.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365171
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_PARTITION_INFO">
+            <summary>
+            Recupera información sobre el tipo, el tamaño y la naturaleza de una partición del disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365179
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SET_PARTITION_INFO">
+            <summary>
+            Asigna información de partición para la partición de disco especificado.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365190
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_DRIVE_LAYOUT">
+            <summary>
+            Recupera información de todas las entradas de las tablas de partición de un disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa363979
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SET_DRIVE_LAYOUT">
+            <summary>
+            Particiones de un disco y datos de la partición.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365188
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_VERIFY">
+            <summary>
+            Verifica un disco duro.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365193
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_FORMAT_TRACKS">
+            <summary>
+            Da formato al conjunto de pistas (contiguo) especificadas, en un disco flexible.
+            Para proporcionar parámetros adicionales, utilice <see cref="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_FORMAT_TRACKS_EX"/>.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365161
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_REASSIGN_BLOCKS">
+            <summary>
+            Dirige el dispositivo de disco para asignar uno o más bloques de recambio.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365185
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_PERFORMANCE">
+            <summary>
+            Habilita los contadores de rendimiento que proporcionan información de rendimiento de disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365183
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_IS_WRITABLE">
+            <summary>
+            Indica si el disco especificado es modificable.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365182
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_LOGGING">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_FORMAT_TRACKS_EX">
+            <summary>
+            Da formato al conjunto de pistas (contiguo) especificadas, en un disco flexible.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365164
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_HISTOGRAM_STRUCTURE">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_HISTOGRAM_DATA">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_HISTOGRAM_RESET">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_REQUEST_STRUCTURE">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_REQUEST_DATA">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_PERFORMANCE_OFF">
+            <summary>
+            Deshabilita los contadores de rendimiento que proporcionan información de rendimiento de disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365184
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_CONTROLLER_NUMBER">
+            <summary>
+            Código obsoleto.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.SMART_GET_VERSION">
+            <summary>
+            Devuelve información sobre la versión, capacidades y una máscara de bits para el dispositivo.
+            Este IOCTL debe ser manejada por controladores compatibles con análisis de autocontrol y tecnología de generación de informes (SMART).
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/en-us/library/ff566202%28v=VS.85%29.aspx
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.SMART_SEND_DRIVE_COMMAND">
+            <summary>
+            Envía al dispositivo uno de los siguientes comandos SMART
+            · Enable or disable reporting on the device
+            · Enable or disable autosaving of attributes
+            · Save current attributes now
+            · Execute offline diagnostics
+            · Get current SMART status
+            · Write to SMART log
+            This IOCTL must be handled by drivers that support SMART.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/en-us/library/ff566206%28v=VS.85%29.aspx
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.SMART_RCV_DRIVE_DATA">
+            <summary>
+            Devuelve el identifica datos ATA-2, atributos SMART para el dispositivo.
+            Este IOCTL debe ser manejada por controladores compatibles con SMART.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/en-us/library/ff566204%28v=VS.85%29.aspx
+            </remarks>            
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_PARTITION_INFO_EX">
+            <summary>
+            Recupera información extendida sobre el tipo, el tamaño y la naturaleza de una partición de disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365180
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SET_PARTITION_INFO_EX">
+            <summary>
+            Establece la información de partición para la partición del disco especificado, incluyendo información de diseño de particiones AT y EFI (Extensible Firmware Interface).
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365174%28v=VS.85%29.aspx
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_DRIVE_LAYOUT_EX">
+            <summary>
+            Recupera la información extendida para cada entrada en las tablas de particiones de un disco.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365191
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SET_DRIVE_LAYOUT_EX">
+            <summary>
+            Establece las particiones de un disco de acuerdo a los datos de información de diseño y partición de unidad especificada.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365189
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_CREATE_DISK">
+            <summary>
+            Inicializa el disco especificado y la tabla de particiones de disco con la información de la estructura CREATE_DISK.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365155
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_LENGTH_INFO">
+            <summary>
+            Recupera la longitud del disco, volumen o partición especificado.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365178
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_DRIVE_GEOMETRY_EX">
+            <summary>
+            Recupera información extendida de la geometría del disco físico: tipo, número de cilindros, pistas por cilindro, sectores por pista y bytes por sector.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365171
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_UPDATE_DRIVE_SIZE">
+            <summary>
+            IOCTL_DISK_UPDATE_DRIVE_SIZE
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GROW_PARTITION">
+            <summary>
+            Amplía la partición especificada.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365181
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_CACHE_INFORMATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SET_CACHE_INFORMATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_WRITE_CACHE_STATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_DELETE_DRIVE_LAYOUT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_UPDATE_PROPERTIES">
+            <summary>
+            Invalida la tabla de particiones en caché y re-enumera el dispositivo.
+            </summary>
+            <remarks>
+            Para más información ver: http://msdn.microsoft.com/es-es/library/aa365192
+            </remarks>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_FORMAT_DRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_SENSE_DEVICE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_INTERNAL_SET_VERIFY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_INTERNAL_CLEAR_VERIFY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_INTERNAL_SET_NOTIFY">
+            <summary>
+            Internal disk driver device control to set notification routine for the device object. Used in DiskPerf.
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_CHECK_VERIFY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_MEDIA_REMOVAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_EJECT_MEDIA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_LOAD_MEDIA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_RESERVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_RELEASE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_FIND_NEW_DEVICES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.IOCTL_DISK_GET_MEDIA_TYPES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerGetParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerGetStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerGetProductData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerSetAccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerGetElementStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerInitializeElementStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerSetPosition">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerExchangeMedium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerMoveMedium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerReinitializeTarget">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.ChangerQueryVolumeTags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FSCTL_REQUEST_OPLOCK_LEVEL_1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlRequestOplockLevel2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlRequestBatchOplock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlOplockBreakAcknowledge">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlOpBatchAckClosePending">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlOplockBreakNotify">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlLockVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlUnlockVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlDismountVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlIsVolumeMounted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlIsPathnameValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlMarkVolumeDirty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlQueryRetrievalPointers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetCompression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetCompression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlMarkAsSystemHive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlOplockBreakAckNo2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlInvalidateVolumes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlQueryFatBpb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlRequestFilterOplock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlFileSystemGetStatistics">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetNtfsVolumeData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetNtfsFileRecord">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetVolumeBitmap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetRetrievalPointers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlMoveFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlIsVolumeDirty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetHfsInformation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlAllowExtendedDasdIo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlReadPropertyData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlWritePropertyData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlFindFilesBySid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlDumpPropertyData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetObjectId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetObjectId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlDeleteObjectId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetReparsePoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlGetReparsePoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlDeleteReparsePoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlEnumUsnData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSecurityIdCheck">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlReadUsnJournal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetObjectIdExtended">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlCreateOrGetObjectId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetSparse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetZeroData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlQueryAllocatedRanges">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlEnableUpgrade">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSetEncryption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlEncryptionFsctlIo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlWriteRawEncrypted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlReadRawEncrypted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlCreateUsnJournal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlReadFileUsnData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlWriteUsnCloseRecord">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlExtendVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlQueryUsnJournal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlDeleteUsnJournal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlMarkHandle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSisCopyFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlSisLinkFiles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlHsmMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlNssControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlHsmData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlRecallFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.FsctlNssRcontrol">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.VideoQuerySupportedBrightness">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.VideoQueryDisplayBrightness">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceControlCode.VideoSetDisplayBrightness">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.DeviceMethod">
+            <summary>
+            Device Method
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceMethod.Buffered">
+            <summary>
+            Buffered
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceMethod.InDirect">
+            <summary>
+            InDirect
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceMethod.OutDirect">
+            <summary>
+            OutDirect
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceMethod.Neither">
+            <summary>
+            Neither
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.DeviceAccess">
+            <summary>
+            Device Access
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceAccess.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceAccess.Special">
+            <summary>
+            Special
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceAccess.Read">
+            <summary>
+            Read
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceAccess.Write">
+            <summary>
+            Write
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.DeviceType">
+            <summary>
+            Device Type
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Beep">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.CDRom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.CDRomFileSytem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Controller">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Datalink">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Dfs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Disk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.DiskFileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.FileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.InPortPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Keyboard">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Mailslot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MidiIn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MidiOut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Mouse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MultiUncProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.NamedPipe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Network">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.NetworkBrowser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.NetworkFileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Null">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.ParallelPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.PhysicalNetcard">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Printer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Scanner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.SerialMousePort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.SerialPort">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Screen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Sound">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Streams">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Tape">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.TapeFileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Transport">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Unknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Video">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.VirtualDisk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.WaveIn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.WaveOut">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Port8042">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.NetworkRedirector">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Battery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.BusExtender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Modem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Vdm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MassStorage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Smb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Ks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Changer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Smartcard">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Acpi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Dvd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.FullscreenVideo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.DfsFileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.DfsVolume">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Serenum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Termsrv">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Ksec">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Fips">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Infiniband">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Vmbus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.CryptProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Wpd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Bluetooth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MtComposite">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.MtTransport">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Biometric">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.DeviceType.Pmi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.ExternDll">
+            <summary>
+            ExternDll
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Activeds">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Advapi32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Cfgmgr32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Comctl32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Comdlg32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Coredll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Gdi32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Gdiplus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Hhctrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Imm32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Kernel32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Loadperf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Mscoree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Mscorwks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Msi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Mqrt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Ntdll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Ole32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Oleacc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Oleaut32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Olepro32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.PerfCounter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Powrprof">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Psapi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.SetupApi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Shell32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Shfolder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.User32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Uxtheme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.WinMM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Winspool">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Wtsapi32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Vsassert">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Shlwapi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.ExternDll.Crypt32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.GuidDevClass">
+            <summary>
+            GuidDevClass
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_1394">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_1394DEBUG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_61883">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_ADAPTER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_APMSUPPORT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_AVC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_BATTERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_BIOMETRIC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_BLUETOOTH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_CDROM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_COMPUTER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_DECODER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_DISKDRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_DISPLAY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_DOT4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_DOT4PRINT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_ENUM1394">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FDC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FLOPPYDISK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_GPS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_HDC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_HIDCLASS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_IMAGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_INFINIBAND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_INFRARED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_KEYBOARD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_LEGACYDRIVER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MEDIA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MEDIUM_CHANGER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MODEM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MONITOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MOUSE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MTD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MULTIFUNCTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_MULTIPORTSERIAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_NET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_NETCLIENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_NETSERVICE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_NETTRANS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_NODRIVER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PCMCIA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PNPPRINTERS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PORTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PRINTER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PRINTERUPGRADE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_PROCESSOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SBP2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SCSIADAPTER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SECURITYACCELERATOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SMARTCARDREADER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_SYSTEM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_TAPEDRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_UNKNOWN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_USB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_VOLUME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_VOLUMESNAPSHOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_WCEUSBS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_ACTIVITYMONITOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_UNDELETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_ANTIVIRUS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_REPLICATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_CONTINUOUSBACKUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_CONTENTSCREENER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_QUOTAMANAGEMENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_SYSTEMRECOVERY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_CFSMETADATASERVER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_HSM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_COMPRESSION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_ENCRYPTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_PHYSICALQUOTAMANAGEMENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_OPENFILEBACKUP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_SECURITYENHANCER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_COPYPROTECTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_SYSTEM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.GuidDevClass.GUID_DEVCLASS_FSFILTER_INFRASTRUCTURE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Shared.Windows.Win32ErrorCode">
+            <summary>
+            Win32ErrorCode
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.INVALID_HANDLE_VALUE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ACCESS_DENIED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ADAP_HDW_ERR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ALREADY_ASSIGNED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ALREADY_EXISTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ARENA_TRASHED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ATOMIC_LOCKS_NOT_SUPPORTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_AUTODATASEG_EXCEEDS_64k">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_ARGUMENTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_COMMAND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_DEV_TYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_DRIVER_LEVEL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_ENVIRONMENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_EXE_FORMAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_FILE_TYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_FORMAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_LENGTH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_NET_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_NET_RESP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_NETPATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_PATHNAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_PIPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_REM_ADAP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_THREADID_ADDR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BAD_UNIT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BROKEN_PIPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BUFFER_OVERFLOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BUSY_DRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_BUSY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CALL_NOT_IMPLEMENTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CANCEL_VIOLATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CANNOT_COPY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CANNOT_MAKE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CHECKOUT_REQUIRED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CHILD_NOT_COMPLETE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CRC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_CURRENT_DIRECTORY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DELETE_PENDING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DEV_NOT_EXIST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DIR_NOT_EMPTY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DIR_NOT_ROOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DIRECT_ACCESS_HANDLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DIRECTORY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DISCARDED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DISK_CHANGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DISK_FULL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DISK_TOO_FRAGMENTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DRIVE_LOCKED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DUP_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_DYNLINK_FROM_INVALID_RING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EA_FILE_CORRUPT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EA_LIST_INCONSISTENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EA_TABLE_FULL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EAS_DIDNT_FIT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EAS_NOT_SUPPORTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ENVVAR_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EXCL_SEM_ALREADY_OWNED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EXE_CANNOT_MODIFY_SIGNED_BINARY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EXE_CANNOT_MODIFY_STRONG_SIGNED_BINARY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EXE_MACHINE_TYPE_MISMATCH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_EXE_MARKED_INVALID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FAIL_I24">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FAIL_NOACTION_REBOOT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FAIL_RESTART">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FAIL_SHUTDOWN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FILE_CHECKED_OUT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FILE_EXISTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FILE_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FILE_TOO_LARGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FILENAME_EXCED_RANGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_FORMS_AUTH_REQUIRED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_GEN_FAILURE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_HANDLE_DISK_FULL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_HANDLE_EOF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IMAGE_SUBSYSTEM_NOT_PRESENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INCOMPATIBLE_WITH_GLOBAL_SHORT_NAME_REGISTRY_SETTING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INFLOOP_IN_RELOC_CHAIN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INSUFFICIENT_BUFFER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_ACCESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_ADDRESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_AT_INTERRUPT_TIME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_BLOCK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_CATEGORY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_DATA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_DRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_EA_HANDLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_EA_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_EVENT_COUNT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_EXE_SIGNATURE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_FLAG_NUMBER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_FUNCTION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_HANDLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_LEVEL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_LIST_FORMAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_LOCK_RANGE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_MINALLOCSIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_MODULETYPE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_OPLOCK_PROTOCOL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_ORDINAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_PARAMETER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_PASSWORD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_SEGDPL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_SEGMENT_NUMBER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_SIGNAL_NUMBER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_STACKSEG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_STARTING_CODESEG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_TARGET_HANDLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_INVALID_VERIFY_SWITCH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IOPL_NOT_ENABLED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_JOIN_PATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_JOIN_TARGET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_JOINED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_SUBST_PATH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_SUBST_TARGET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_IS_SUBSTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_ITERATED_DATA_EXCEEDS_64k">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_JOIN_TO_JOIN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_JOIN_TO_SUBST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_LABEL_TOO_LONG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_LOCK_FAILED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_LOCK_VIOLATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_LOCKED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_MAX_SESSIONS_REACHED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_MAX_THRDS_REACHED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_META_EXPANSION_TOO_LONG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_MOD_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_MORE_DATA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_MR_MID_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NEGATIVE_SEEK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NESTING_NOT_ALLOWED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NET_WRITE_FAULT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NETNAME_DELETED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NETWORK_ACCESS_DENIED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NETWORK_BUSY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_DATA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_MORE_FILES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_MORE_ITEMS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_MORE_SEARCH_HANDLES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_PROC_SLOTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_SIGNAL_SENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_SPOOL_SPACE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NO_VOLUME_LABEL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_DOS_DISK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_ENOUGH_MEMORY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_JOINED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_LOCKED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_OWNER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_READY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_SAME_DEVICE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_SUBSTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOT_SUPPORTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_NOTIFICATION_GUID_ALREADY_DEFINED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_OPEN_FAILED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_OPLOCK_NOT_GRANTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_OUT_OF_PAPER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_OUT_OF_STRUCTURES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_OUTOFMEMORY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PARTIAL_COPY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PATH_BUSY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PATH_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PIPE_BUSY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PIPE_LOCAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PIPE_NOT_CONNECTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PRINT_CANCELLED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PRINTQ_FULL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PROC_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PROCESS_MODE_ALREADY_BACKGROUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_PROCESS_MODE_NOT_BACKGROUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_READ_FAULT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_REDIR_PAUSED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_RELOC_CHAIN_XEEDS_SEGLIM">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_REM_NOT_LIST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_REQ_NOT_ACCEP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_RING2_STACK_IN_USE">
+            <summary>
+            
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_RING2SEG_MUST_BE_MOVABLE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SAME_DRIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SCOPE_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SECTOR_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SECURITY_STREAM_IS_INCONSISTENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEEK_ON_DEVICE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEEK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEM_IS_SET">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEM_NOT_FOUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEM_OWNER_DIED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEM_TIMEOUT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SEM_USER_LIMIT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SHARING_BUFFER_EXCEEDED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SHARING_PAUSED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SHARING_VIOLATION">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SHORT_NAMES_NOT_ENABLED_ON_VOLUME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SIGNAL_PENDING">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SIGNAL_REFUSED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SUBST_TO_JOIN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SUBST_TO_SUBST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SUCCESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_SYSTEM_TRACE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_THREAD_1_INACTIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_THREAD_MODE_ALREADY_BACKGROUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_THREAD_MODE_NOT_BACKGROUND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_CMDS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_MODULES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_MUXWAITERS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_NAMES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_OPEN_FILES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_POSTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_SEM_REQUESTS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_SEMAPHORES">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_SESS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_TOO_MANY_TCBS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_UNEXP_NET_ERR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_VC_DISCONNECTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_VIRUS_DELETED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_VIRUS_INFECTED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_WAIT_NO_CHILDREN">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_WRITE_FAULT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_WRITE_PROTECT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.ERROR_WRONG_DISK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Shared.Windows.Win32ErrorCode.WAIT_TIMEOUT">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

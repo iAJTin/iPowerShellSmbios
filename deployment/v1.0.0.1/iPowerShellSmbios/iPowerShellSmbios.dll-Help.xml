@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <!-- Cmdlet: Get-SmbiosAvailableStructures -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosAvailableStructures</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosAvailableStructures</command:noun>
+      <maml:description>
+        <maml:para>Returns a collection of elements where each element represents an available SMBIOS structure.</maml:para>
+      </maml:description>
+    </command:details>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosAvailableStructures</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <!-- OutputType: StructureResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.StructureResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+PS&gt; Get-SmbiosAvailableStructures | SMBIOS-Available-Structures
+
+                   Class ClassId HexadecimalClassId
+                   ----- ------- ------------------
+                    Bios       0 00
+                  System       1 01
+               BaseBoard       2 02
+         SystemEnclosure       3 03
+               Processor       4 04
+             SystemSlots       9 09
+          OnBoardDevices      10 0A
+     PhysicalMemoryArray      16 10
+            MemoryDevice      17 11
+MemoryArrayMappedAddress      19 13
+              SystemBoot      32 20
+              EndOfTable     127 7F</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-SmbiosImplementedProperties -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosImplementedProperties</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosImplementedProperties</command:noun>
+      <maml:description>
+        <maml:para>Returns a collection of elements where each element represents an implemented property for given strucutre class.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The elements are suitable to be used in the 'Get-SmbiosProperty' operation as an input parameter of the '-Property' parameter.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosImplementedProperties</maml:name>
+        <!-- Parameter: Class -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Class</maml:name>
+          <maml:description>
+            <maml:para>Structure class name</maml:para>
+            <maml:para>Possible values: Bios, System, BaseBoard, SystemEnclosure, Processor, MemoryController, MemoryModule, Cache, PortConnector, SystemSlots, OnBoardDevices, OemStrings, SystemConfigurationOptions, BiosLanguage, GroupAssociations, SystemEventLog, PhysicalMemoryArray, MemoryDevice, BitMemoryError32, MemoryArrayMappedAddress, MemoryDeviceMappedAddress, BuiltInPointingDevice, PortableBattery, SystemReset, HardwareSecurity, SystemPowerControls, VoltageProbe, CoolingDevice, TemperatureProbe, ElectricalCurrentProbe, OutOfBandRemote, BootIntegrityServicesEntryPoint, SystemBoot, BitMemoryError64, ManagementDevice, ManagementDeviceComponent, ManagementDeviceThresholdData, MemoryChannel, IpmiDevice, SystemPowerSupply, AdditionalInformation, OnBoardDevicesExtended, ManagementControllerHostInterface, TpmDevice, ProcessorAdditionalInformation, FirmwareInventoryInformation, StringProperty, Inactive, EndOfTable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">DmiStructureClass</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>Bios</dev:defaultValue>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">Bios</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">System</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BaseBoard</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemEnclosure</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Processor</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryController</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryModule</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Cache</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PortConnector</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemSlots</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OnBoardDevices</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OemStrings</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemConfigurationOptions</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BiosLanguage</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">GroupAssociations</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemEventLog</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PhysicalMemoryArray</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BitMemoryError32</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryArrayMappedAddress</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryDeviceMappedAddress</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BuiltInPointingDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PortableBattery</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemReset</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">HardwareSecurity</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemPowerControls</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">VoltageProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">CoolingDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TemperatureProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ElectricalCurrentProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OutOfBandRemote</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BootIntegrityServicesEntryPoint</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemBoot</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BitMemoryError64</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDeviceComponent</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDeviceThresholdData</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryChannel</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">IpmiDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemPowerSupply</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AdditionalInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OnBoardDevicesExtended</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementControllerHostInterface</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TpmDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorAdditionalInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">FirmwareInventoryInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">StringProperty</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Inactive</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">EndOfTable</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Class -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Class</maml:name>
+        <maml:description>
+          <maml:para>Structure class name</maml:para>
+          <maml:para>Possible values: Bios, System, BaseBoard, SystemEnclosure, Processor, MemoryController, MemoryModule, Cache, PortConnector, SystemSlots, OnBoardDevices, OemStrings, SystemConfigurationOptions, BiosLanguage, GroupAssociations, SystemEventLog, PhysicalMemoryArray, MemoryDevice, BitMemoryError32, MemoryArrayMappedAddress, MemoryDeviceMappedAddress, BuiltInPointingDevice, PortableBattery, SystemReset, HardwareSecurity, SystemPowerControls, VoltageProbe, CoolingDevice, TemperatureProbe, ElectricalCurrentProbe, OutOfBandRemote, BootIntegrityServicesEntryPoint, SystemBoot, BitMemoryError64, ManagementDevice, ManagementDeviceComponent, ManagementDeviceThresholdData, MemoryChannel, IpmiDevice, SystemPowerSupply, AdditionalInformation, OnBoardDevicesExtended, ManagementControllerHostInterface, TpmDevice, ProcessorAdditionalInformation, FirmwareInventoryInformation, StringProperty, Inactive, EndOfTable</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">DmiStructureClass</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>Bios</dev:defaultValue>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">Bios</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">System</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BaseBoard</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemEnclosure</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Processor</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryController</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryModule</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Cache</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PortConnector</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemSlots</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OnBoardDevices</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OemStrings</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemConfigurationOptions</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BiosLanguage</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">GroupAssociations</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemEventLog</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PhysicalMemoryArray</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BitMemoryError32</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryArrayMappedAddress</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryDeviceMappedAddress</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BuiltInPointingDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PortableBattery</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemReset</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">HardwareSecurity</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemPowerControls</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">VoltageProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">CoolingDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TemperatureProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ElectricalCurrentProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OutOfBandRemote</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BootIntegrityServicesEntryPoint</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemBoot</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BitMemoryError64</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDeviceComponent</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDeviceThresholdData</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryChannel</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">IpmiDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemPowerSupply</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AdditionalInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OnBoardDevicesExtended</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementControllerHostInterface</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TpmDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorAdditionalInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">FirmwareInventoryInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">StringProperty</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Inactive</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">EndOfTable</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Structure class name</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the all implemented properties for the 'MemoryArrayMappedAddress' structure class.
+The search result returns a collection of objects with the property information.
+The data type of the elements of the collection is suitable to be used as an input value in the '-Property' parameter
+of the Get-SmbiosProperty operation.
+
+PS&gt; Get-SmbiosImplementedProperties -Class MemoryArrayMappedAddress | SMBIOS-Implemented-Properties -Class MemoryArrayMappedAddress
+
+Class              : MemoryArrayMappedAddress
+ClassId            : 19
+HexadecimalClassId : 13
+ImplementedVersion : v21
+Index              : 0
+PropertyKey        : Structure = MemoryArrayMappedAddress, Property = MemoryArrayHandle, Unit = None
+
+Class              : MemoryArrayMappedAddress
+ClassId            : 19
+HexadecimalClassId : 13
+ImplementedVersion : v21
+Index              : 0
+PropertyKey        : Structure = MemoryArrayMappedAddress, Property = PartitionWidth, Unit = None
+
+Class              : MemoryArrayMappedAddress
+ClassId            : 19
+HexadecimalClassId : 13
+ImplementedVersion : v21
+Index              : 0
+PropertyKey        : Structure = MemoryArrayMappedAddress, Property = StartingAddress, Unit = Bytes
+
+Class              : MemoryArrayMappedAddress
+ClassId            : 19
+HexadecimalClassId : 13
+ImplementedVersion : v21
+Index              : 0
+PropertyKey        : Structure = MemoryArrayMappedAddress, Property = EndingAddress, Unit = Bytes</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-SmbiosLocateProperty -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosLocateProperty</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosLocateProperty</command:noun>
+      <maml:description>
+        <maml:para>Returns a value that contains the location or locations of the SMBIOS property by its name.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>If you get multiple results you can filter the result indicating the specific structure class and index into collection. For more information, please see the examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosLocateProperty</maml:name>
+        <!-- Parameter: Name -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>The property name to locate.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+        <!-- Parameter: Class -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Class</maml:name>
+          <maml:description>
+            <maml:para>Optional structure class name</maml:para>
+            <maml:para>Possible values: Bios, System, BaseBoard, SystemEnclosure, Processor, MemoryController, MemoryModule, Cache, PortConnector, SystemSlots, OnBoardDevices, OemStrings, SystemConfigurationOptions, BiosLanguage, GroupAssociations, SystemEventLog, PhysicalMemoryArray, MemoryDevice, BitMemoryError32, MemoryArrayMappedAddress, MemoryDeviceMappedAddress, BuiltInPointingDevice, PortableBattery, SystemReset, HardwareSecurity, SystemPowerControls, VoltageProbe, CoolingDevice, TemperatureProbe, ElectricalCurrentProbe, OutOfBandRemote, BootIntegrityServicesEntryPoint, SystemBoot, BitMemoryError64, ManagementDevice, ManagementDeviceComponent, ManagementDeviceThresholdData, MemoryChannel, IpmiDevice, SystemPowerSupply, AdditionalInformation, OnBoardDevicesExtended, ManagementControllerHostInterface, TpmDevice, ProcessorAdditionalInformation, FirmwareInventoryInformation, StringProperty, Inactive, EndOfTable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">DmiStructureClass</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+            <maml:uri />
+          </dev:type>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" variableLength="false">Bios</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">System</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BaseBoard</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemEnclosure</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Processor</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryController</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryModule</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Cache</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PortConnector</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemSlots</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OnBoardDevices</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OemStrings</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemConfigurationOptions</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BiosLanguage</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">GroupAssociations</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemEventLog</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PhysicalMemoryArray</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BitMemoryError32</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryArrayMappedAddress</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryDeviceMappedAddress</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BuiltInPointingDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">PortableBattery</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemReset</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">HardwareSecurity</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemPowerControls</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">VoltageProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">CoolingDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TemperatureProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ElectricalCurrentProbe</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OutOfBandRemote</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BootIntegrityServicesEntryPoint</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemBoot</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">BitMemoryError64</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDeviceComponent</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementDeviceThresholdData</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">MemoryChannel</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">IpmiDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">SystemPowerSupply</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">AdditionalInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">OnBoardDevicesExtended</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ManagementControllerHostInterface</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">TpmDevice</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">ProcessorAdditionalInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">FirmwareInventoryInformation</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">StringProperty</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">Inactive</command:parameterValue>
+            <command:parameterValue required="false" variableLength="false">EndOfTable</command:parameterValue>
+          </command:parameterValueGroup>
+        </command:parameter>
+        <!-- Parameter: Index -->
+        <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Index</maml:name>
+          <maml:description>
+            <maml:para>Optional index of element in the collection</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Name -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>The property name to locate.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">string</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+      <!-- Parameter: Class -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Class</maml:name>
+        <maml:description>
+          <maml:para>Optional structure class name</maml:para>
+          <maml:para>Possible values: Bios, System, BaseBoard, SystemEnclosure, Processor, MemoryController, MemoryModule, Cache, PortConnector, SystemSlots, OnBoardDevices, OemStrings, SystemConfigurationOptions, BiosLanguage, GroupAssociations, SystemEventLog, PhysicalMemoryArray, MemoryDevice, BitMemoryError32, MemoryArrayMappedAddress, MemoryDeviceMappedAddress, BuiltInPointingDevice, PortableBattery, SystemReset, HardwareSecurity, SystemPowerControls, VoltageProbe, CoolingDevice, TemperatureProbe, ElectricalCurrentProbe, OutOfBandRemote, BootIntegrityServicesEntryPoint, SystemBoot, BitMemoryError64, ManagementDevice, ManagementDeviceComponent, ManagementDeviceThresholdData, MemoryChannel, IpmiDevice, SystemPowerSupply, AdditionalInformation, OnBoardDevicesExtended, ManagementControllerHostInterface, TpmDevice, ProcessorAdditionalInformation, FirmwareInventoryInformation, StringProperty, Inactive, EndOfTable</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">DmiStructureClass</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+          <maml:uri />
+        </dev:type>
+        <command:parameterValueGroup>
+          <command:parameterValue required="false" variableLength="false">Bios</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">System</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BaseBoard</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemEnclosure</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Processor</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryController</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryModule</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Cache</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PortConnector</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemSlots</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OnBoardDevices</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OemStrings</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemConfigurationOptions</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BiosLanguage</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">GroupAssociations</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemEventLog</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PhysicalMemoryArray</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BitMemoryError32</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryArrayMappedAddress</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryDeviceMappedAddress</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BuiltInPointingDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">PortableBattery</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemReset</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">HardwareSecurity</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemPowerControls</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">VoltageProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">CoolingDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TemperatureProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ElectricalCurrentProbe</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OutOfBandRemote</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BootIntegrityServicesEntryPoint</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemBoot</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">BitMemoryError64</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDeviceComponent</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementDeviceThresholdData</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">MemoryChannel</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">IpmiDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">SystemPowerSupply</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">AdditionalInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">OnBoardDevicesExtended</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ManagementControllerHostInterface</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">TpmDevice</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">ProcessorAdditionalInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">FirmwareInventoryInformation</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">StringProperty</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">Inactive</command:parameterValue>
+          <command:parameterValue required="false" variableLength="false">EndOfTable</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+      <!-- Parameter: Index -->
+      <command:parameter required="false" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Index</maml:name>
+        <maml:description>
+          <maml:para>Optional index of element in the collection</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">int</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>The property name to locate.</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Hardware.Specification.Dmi.DmiStructureClass</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Optional structure class name</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>Optional index of element in the collection</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+      <!-- OutputType: PropertyDefinitionResult[] -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult[]</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'BiosVersion' property.
+The result of the search tells us that it belongs to the 'Bios' structure class and the implemented structure version in this system is v24,
+additionally the 'Structure' property stores the key that identifies this property.
+
+Notice, as it only returns one element.
+
+PS&gt; Get-SmbiosLocateProperty -Name BiosVersion | SMBIOS-Locate-Property -Name BiosVersion
+
+Class              : Bios
+ClassId            : 0
+HexadecimalClassId : 00
+ImplementedVersion : v24
+Index              : 0
+PropertyKey        : Structure = Bios, Property = BiosVersion, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'AssetTag' property.
+The search result tells us that it belongs to 'BaseBoard', 'Processor' and a collection of 'Memory Device'.
+
+Notice, as it now returns an array containing the matches
+
+PS&gt; Get-SmbiosLocateProperty -Name AssetTag | SMBIOS-Locate-Property -Name AssetTag
+
+Class              : BaseBoard
+ClassId            : 2
+HexadecimalClassId : 02
+ImplementedVersion : Latest
+Index              : 0
+PropertyKey        : Structure = BaseBoard, Property = AssetTag, Unit = None
+
+Class              : Processor
+ClassId            : 4
+HexadecimalClassId : 04
+ImplementedVersion : v23
+Index              : 0
+PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 0
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 1
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 2
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 3
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 4
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 5
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+ Class              : MemoryDevice
+ ClassId            : 17
+ HexadecimalClassId : 11
+ ImplementedVersion : v27
+ Index              : 6
+ PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None
+
+ Class              : MemoryDevice
+ ClassId            : 17
+ HexadecimalClassId : 11
+ ImplementedVersion : v27
+ Index              : 7
+ PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the property 'AssetTag' but only that of structure class 'Processor'.
+
+Notice, as it only returns one element.
+
+PS&gt;  Get-SmbiosLocateProperty -Name AssetTag -Class Processor | SMBIOS-Locate-Property -Name AssetTag -Class Processor
+
+Class              : Processor
+ClassId            : 4
+HexadecimalClassId : 04
+ImplementedVersion : v23
+Index              : 0
+PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 4  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'AssetTag' property but only those whose index is '0' (the first element).
+
+Notice, as it now returns an array containing the matches
+
+PS&gt; Get-SmbiosLocateProperty -Name AssetTag -Index 0 | SMBIOS-Locate-Property -Name AssetTag -Index 0
+
+Class              : BaseBoard
+ClassId            : 2
+HexadecimalClassId : 02
+ImplementedVersion : Latest
+Index              : 0
+PropertyKey        : Structure = BaseBoard, Property = AssetTag, Unit = None
+
+Class              : Processor
+ClassId            : 4
+HexadecimalClassId : 04
+ImplementedVersion : v23
+Index              : 0
+PropertyKey        : Structure = Processor, Property = AssetTag, Unit = None
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 0
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 5  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+The following example shows how to get the location of the 'AssetTag' property, but only element 4 of the 'MemoryDevice' structure class.
+
+Notice, as it only returns one element.
+
+PS&gt; Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4 | SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4
+
+Class              : MemoryDevice
+ClassId            : 17
+HexadecimalClassId : 11
+ImplementedVersion : v27
+Index              : 4
+PropertyKey        : Structure = MemoryDevice, Property = AssetTag, Unit = None</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-SmbiosProperty -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosProperty</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosProperty</command:noun>
+      <maml:description>
+        <maml:para>Returns a reference that contains the information associated with the given property such as the key that identifies the property and its value.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The value of the property Property must be obtained by calling the Get-SmbiosLocateProperty, for more information see the help for the Get-SmbiosLocateProperty and the sample examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosProperty</maml:name>
+        <!-- Parameter: Property -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>A PropertyDefinitionResult instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">PropertyDefinitionResult</command:parameterValue>
+          <dev:type>
+            <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Property -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>A PropertyDefinitionResult instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">PropertyDefinitionResult</command:parameterValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>A PropertyDefinitionResult instance.</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDefinitionResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDefinitionResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+How to get the value of the Vendor property?
+First we make a call to 'Get-SmbiosLocateProperty', to search among all the available properties of our system those that call 'Vendor' and
+then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information, remember that a property is made up of its key and its value.
+
+PS&gt; Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Vendor -Class Bios) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Vendor -Class Bios)
+
+Key                                               Value
+---                                               -----
+ Structure = Bios, Property = Vendor, Unit = None Parallels Software International Inc.</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+How to get the value of the AssetTag property of Memory device (4) ?
+First we make a call to 'Get-SmbiosLocateProperty', to search among all the available properties of our system those that call 'AssetTag' filtered to obtain
+the 5th element of the array (remember zero index in arrays) and then with the result obtained, we call 'Get-SmbiosProperty' to obtain the property information,
+remember that a property is made up of its key and its value.
+
+PS&gt; Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4) | SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4)
+
+Name         : AssetTag
+Value        :
+Units        : None
+Class        : MemoryDevice
+FriendlyName : AssetTag
+Description  :</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-SmbiosPropertyDetail -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosPropertyDetail</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosPropertyDetail</command:noun>
+      <maml:description>
+        <maml:para>Returns a reference that contains the complete data of the given property, includes its name, value, unit in which the property is expressed, description and structure class to which it belongs.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The value of the property Property must be obtained by calling the Get-SmbiosProperty, for more information see the help for the Get-SmbiosProperty and the sample examples below.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosPropertyDetail</maml:name>
+        <!-- Parameter: Property -->
+        <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>A PropertyItem instance.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true">PropertyItem</command:parameterValue>
+          <dev:type>
+            <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+            <maml:uri />
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <!-- Parameter: Property -->
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="named">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>A PropertyItem instance.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true">PropertyItem</command:parameterValue>
+        <dev:type>
+          <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>iTin.Core.Hardware.Common.PropertyItem</maml:name>
+          <maml:uri />
+        </dev:type>
+        <maml:description>
+          <maml:para>A PropertyItem instance.</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <!-- OutputType: PropertyDetailResult -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>PowerShellSmbios.CmdLets.Results.PropertyDetailResult</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+How to get the value of the 'BiosVersion' property of the 'Bios' class ?.
+To do this, first by calling 'Get-SmbiosLocateProperty', we search among all the available properties of our system for those that call 'BiosVersion'
+and then with the result obtained, the 'Get-SmbiosProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+Finally we call 'Get-SmbiosPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
+
+PS&gt; Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name BiosVersion)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name BiosVersion))
+
+Name         : BiosVersion
+Value        : 16.0.1 (48919)
+Units        : None
+Class        : Bios
+FriendlyName : BIOS Version
+Description  : String number of the BIOS Version</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 2  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+How to get the value of the 'Manufacturer' property of the 'System' class ?.
+To do this, first by calling 'Get-SmbiosLocateProperty', we search among all the available properties of our system for those that call 'Manufacturer' and belongs to 'System' structure class
+and then with the result obtained, the 'Get-SmbiosProperty' call tries to obtain the property information, remember that a property it is made up of your key and its value.
+Finally we call 'Get-SmbiosPropertyDetail' to obtain all the available information about the 'Manufacturer' property.
+
+PS&gt; Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name Manufacturer -Class System)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name Manufacturer -Class System))
+
+Name         : Manufacturer
+Value        : Parallels Software International Inc.
+Units        : None
+Class        : BasicInformation
+FriendlyName : System Manufacturer
+Description  : System Manufacturer</dev:code>
+      </command:example>
+      <command:example>
+        <maml:title>----------  EXAMPLE 3  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+How to get the value of the 'AssetTag' property, but only element 4 of the 'MemoryDevice' structure class ?.
+
+PS&gt; Get-SmbiosPropertyDetail -Property (Get-SmbiosProperty -Property (Get-SmbiosLocateProperty -Name AssetTag -Class MemoryDevice -Index 4)) | SMBIOS-Property-Detail -Property (SMBIOS-Property -Property (SMBIOS-Locate-Property -Name AssetTag -Class MemoryDevice -Index 4))
+
+Name         : AssetTag
+Value        : 
+Units        : None
+Class        : MemoryDevice
+FriendlyName : AssetTag
+Description  : </dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+  <!-- Cmdlet: Get-SmbiosVersion -->
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Get-SmbiosVersion</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>SmbiosVersion</command:noun>
+      <maml:description>
+        <maml:para>Returns a value that contains the SMBIOS version of the system.</maml:para>
+      </maml:description>
+    </command:details>
+    <command:syntax>
+      <!-- Parameter set: __AllParameterSets -->
+      <command:syntaxItem>
+        <maml:name>Get-SmbiosVersion</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <!-- OutputType: String -->
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+          <maml:uri />
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:examples>
+      <command:example>
+        <maml:title>----------  EXAMPLE 1  ----------</maml:title>
+        <dev:code>The output may be different (depending on your system)!!!
+
+PS&gt; Get-SmbiosVersion | SMBIOS-Version
+207</dev:code>
+      </command:example>
+    </command:examples>
+  </command:command>
+</helpItems>

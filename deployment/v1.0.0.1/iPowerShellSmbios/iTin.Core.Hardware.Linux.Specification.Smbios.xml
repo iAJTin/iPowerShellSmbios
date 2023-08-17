@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Core.Hardware.Linux.Specification.Smbios</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Core.Hardware.Linux.Specification.Smbios.SmbiosOperations">
+            <summary>
+            Specialization of the <see cref="T:iTin.Core.Hardware.Abstractions.Specification.Smbios.ISmbiosOperations"/> interface that contains the <b>SMBIOS</b> operations for <b>Linux</b> system.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Hardware.Linux.Specification.Smbios.SmbiosOperations.GetSmbiosDataArray(iTin.Core.Hardware.Abstractions.Specification.Smbios.ISmbiosConnectOptions)">
+            <summary>
+            Gets a value containing the raw <b>SMBIOS</b> data.
+            </summary>
+            <param name="options">Connection options for remote use</param>
+            <returns>
+            The raw <b>SMBIOS</b> data.
+            </returns>
+        </member>
+    </members>
+</doc>

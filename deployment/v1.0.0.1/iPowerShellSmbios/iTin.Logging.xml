@@ -1,0 +1,1138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Logging.ComponentModel.CallerData">
+            <summary>
+            Defines properties for caller
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.CallerData.#ctor">
+            <summary>
+            Initialize a new instance of the <see cref="T:iTin.Logging.ComponentModel.CallerData" /> class.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.CallerData.ApplicationName">
+            <summary>
+            Gets or sets application name
+            </summary>
+            <value>
+            Application name.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.CallerData.CallerLineNumber">
+            <summary>
+            Gets or sets the caller line number
+            </summary>
+            <value>
+            Caller line number.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.CallerData.CallerFilePath">
+            <summary>
+            Gets or sets caller file path
+            </summary>
+            <value>
+            Caller file path.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.CallerData.CallerMemberName">
+            <summary>
+            Gets or sets caller member name.
+            </summary>
+            <value>
+            Caller member name.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.CallerData.ToString">
+            <summary>
+            Returns a string that represents the current instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents the current object.
+            </returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ILogger">
+            <summary>
+            Defines a generic logger
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ILogger.ApplicationName">
+            <summary>
+            Gets or sets application's name
+            </summary>
+            <value>
+            Application's name.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ILogger.Deep">
+            <summary>
+            Get or set the level of detail of the logger
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Logging.ComponentModel.LogDeep"/> enumeration.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ILogger.Logs">
+            <summary>
+            Gets the collection of Log Writers that are used to log the Application events.
+            </summary>
+            <value>
+            An <see cref="T:System.Collections.Generic.IList`1"/> collection of Log Writers.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ILogger.Status">
+            <summary>
+            Get or set the current logger status.
+            </summary>
+            <value>
+            One of the values of the <see cref="T:iTin.Logging.ComponentModel.LogStatus"/> enumeration.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILogger.Debug(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows debug message for all registered loggers.
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILogger.Error(System.String,System.Exception,System.String,System.String,System.Int32)">
+            <summary>
+            Shows error message for all registered loggers.
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="exception">Message to show</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILogger.Fatal(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows fatal message for all registered loggers.
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILogger.Info(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows info message for all registered loggers.
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILogger.Warn(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows warning message for all registered loggers.
+            </summary>
+            <param name="message">Message to show</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.KnownPatterns">
+            <summary>
+            Defines generic patterns for a logger
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.KnownPatterns.DefaultPattern">
+            <summary>
+            Returns an array of strings that contains default pattern. Always returns <b>{FullDate} {Level} - {Message}{NewLine}</b>
+            </summary>
+            <value>
+            Array of string that contains pattern to use.
+            </value>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.KnownPatterns.DefaultErrorPattern">
+            <summary>
+            Returns an array of strings that contains default error log entry pattern.
+            </summary>
+            <value>
+            Array of string that contains pattern to use.
+            </value>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.KnownPatterns.DefaultFatalPattern">
+            <summary>
+            Returns an array of strings that contains default fatal log entry pattern.
+            </summary>
+            <value>
+            Array of string that contains pattern to use.
+            </value>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.KnownPatterns.DefaultFilenamePattern">
+            <summary>
+            Returns an array of strings that contains default pattern for log filename. Always returns <b>{ApplicationName}_{Date}.{LogExtension}</b>.
+            </summary>
+            <value>
+            Array of string that contains pattern to use.
+            </value>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ILayout">
+            <summary>
+            Defines a generic layout
+            </summary>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ColoredConsoleLayout">
+            <summary>
+            Defines a layout for <see cref="T:iTin.Logging.ColoredConsoleLog"/> logger.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ColoredConsoleLayout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleLayout" /> class.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ColoredConsoleLayout.Mappings">
+            <summary>
+            Defined mappings collection for this instance.
+            </summary>
+            <value>
+            A <see cref="T:System.Collections.Generic.IEnumerable`1"/> for this instance.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ColoredConsoleLayout.GetMapping(iTin.Logging.ComponentModel.LogLevel)">
+            <summary>
+            Returns the mappings for specified log level
+            </summary>
+            <param name="level">The log level.</param>
+            <returns>
+            A <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> for specified log level.
+            </returns>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ColoredConsoleLayout.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ColoredConsoleMapping">
+            <summary>
+            Defines mappings for <see cref="T:iTin.Logging.ColoredConsoleLog"/>.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.NotFoundMapping">
+            <summary>
+            Returns new empty instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> that indicates not found.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.DefaultFatalMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> configured for <b>Fatal</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.DefaultErrorMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> configured for <b>Error</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.DefaultInfoMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> configured for <b>Info</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.DefaultDebugMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> configured for <b>Debug</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ColoredConsoleMapping.DefaultWarnMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleMapping"/> configured for <b>Warn</b> log level.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ColoredConsoleMapping.Level">
+            <summary>
+            Gets or sets the log level.
+            </summary>
+            <value>
+            The log level.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ColoredConsoleMapping.BackColor">
+            <summary>
+            Gets or sets mapping backcolor.
+            </summary>
+            <value>
+            Mapping backcolor
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ColoredConsoleMapping.ForeColor">
+            <summary>
+            Gets or sets mapping forecolor .
+            </summary>
+            <value>
+            Mapping forecolor
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ColoredConsoleMapping.Pattern">
+            <summary>
+            Gets or set the pattern lines for this mapping  .
+            </summary>
+            <value>
+            The pattern lines for this mapping.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ColoredConsoleMapping.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ConsoleLayout">
+            <summary>
+            Defines a layout for <see cref="T:iTin.Logging.ConsoleLog"/> logger.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ConsoleLayout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ComponentModel.ConsoleLayout" /> class.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ConsoleLayout.Mappings">
+            <summary>
+            Defined mappings collection for this instance.
+            </summary>
+            <value>
+            A <see cref="T:System.Collections.Generic.IEnumerable`1"/> for this instance.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ConsoleLayout.GetMapping(iTin.Logging.ComponentModel.LogLevel)">
+            <summary>
+            Returns the mappings for specified log level
+            </summary>
+            <param name="level">The log level.</param>
+            <returns>
+            A <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> for specified log level.
+            </returns>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ConsoleLayout.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ConsoleMapping">
+            <summary>
+            Defines mappings for <see cref="T:iTin.Logging.ConsoleLog"/>.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.NotFoundMapping">
+            <summary>
+            Returns new empty instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> that indicates not found.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.DefaultFatalMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> configured for <b>Fatal</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.DefaultErrorMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> configured for <b>Error</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.DefaultInfoMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> configured for <b>Info</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.DefaultDebugMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> configured for <b>Debug</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.ConsoleMapping.DefaultWarnMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.ConsoleMapping"/> configured for <b>Warn</b> log level.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ConsoleMapping.Level">
+            <summary>
+            Gets or sets the log level.
+            </summary>
+            <value>
+            The log level.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.ConsoleMapping.Pattern">
+            <summary>
+            Gets or set the pattern lines for this mapping  .
+            </summary>
+            <value>
+            The pattern lines for this mapping.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ConsoleMapping.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.FileLogLayout">
+            <summary>
+            Defines a layout for <see cref="T:iTin.Logging.FileLog"/> logger.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileLogLayout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ComponentModel.FileLogLayout" /> class.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.FileLogLayout.Mappings">
+            <summary>
+            Defined mappings collection for this instance.
+            </summary>
+            <value>
+            A <see cref="T:System.Collections.Generic.IEnumerable`1"/> for this instance.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileLogLayout.GetMapping(iTin.Logging.ComponentModel.LogLevel)">
+            <summary>
+            Returns the mappings for specified log level
+            </summary>
+            <param name="level">The log level.</param>
+            <returns>
+            A <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> for specified log level.
+            </returns>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileLogLayout.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.FileMapping">
+            <summary>
+            Defines mappings for <see cref="T:iTin.Logging.FileLog"/>.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.NotFoundMapping">
+            <summary>
+            Returns new empty instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> that indicates not found.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.DefaultFatalMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> configured for <b>Fatal</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.DefaultErrorMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> configured for <b>Error</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.DefaultInfoMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> configured for <b>Info</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.DefaultDebugMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> configured for <b>Debug</b> log level.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.FileMapping.DefaultWarnMapping">
+            <summary>
+            Returns new instance of <see cref="T:iTin.Logging.ComponentModel.FileMapping"/> configured for <b>Warn</b> log level.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.FileMapping.Level">
+            <summary>
+            Gets or sets the log level.
+            </summary>
+            <value>
+            The log level.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.FileMapping.Pattern">
+            <summary>
+            Gets or set the pattern lines for this mapping  .
+            </summary>
+            <value>
+            The pattern lines for this mapping.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileMapping.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.LogDeep">
+            <summary>
+            Contains values that specify log deep
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogDeep.AnyCall">
+            <summary>
+            Logger show any call (Application / External).
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogDeep.OnlyApplicationCalls">
+            <summary>
+            Logger show only application calls.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogDeep.OnlyExternalCalls">
+            <summary>
+            Logger show only library external calls.
+            </summary>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.LogLevel">
+            <summary>
+            Contains values that specify log verbosity.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.Fatal">
+            <summary>
+            Fatal
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.Warn">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.Info">
+            <summary>
+            Information
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.Debug">
+            <summary>
+            Debug
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogLevel.All">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.LogStatus">
+            <summary>
+            Contains values that specify log status
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogStatus.Running">
+            <summary>
+            Activate log activity.
+            </summary>
+        </member>
+        <member name="F:iTin.Logging.ComponentModel.LogStatus.Paused">
+            <summary>
+            Pauses log activitiy.
+            </summary>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.ILog">
+            <summary>
+            Declares members implemented by Log Writer classes.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.ILog.WriteExceptionEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.Exception,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="exception">Exception to log</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.MappingInfo">
+            <summary>
+            Defines mapping information
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.MappingInfo.Caller">
+            <summary>
+            Gets or set the caller data
+            </summary>
+            <value>
+            The caller data
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.MappingInfo.Exception">
+            <summary>
+            Gets or set the exception to log
+            </summary>
+            <value>
+            The exception to log.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.MappingInfo.Message">
+            <summary>
+            Gets or sets the message to log  
+            </summary>
+            <value>
+            The message to log.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.MappingInfo.Level">
+            <summary>
+            Gets or sets the log level.
+            </summary>
+            <value>The level.</value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.MappingInfo.Parse(System.String)">
+            <summary>
+            Parses the specified entry.
+            </summary>
+            <param name="entry">The entry.</param>
+            <returns>
+            Parsed pattern string.
+            </returns>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.MappingInfo.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ComponentModel.FileLogSettings">
+            <summary>
+            Defines file log settings.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileLogSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ComponentModel.FileLogSettings" /> class.
+            </summary>
+        </member>
+        <member name="P:iTin.Logging.ComponentModel.FileLogSettings.FilenamePattern">
+            <summary>
+            Gets the log file name pattern
+            </summary>
+            <value>
+            A string that specifies the log file name pattern.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ComponentModel.FileLogSettings.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.EventArgs.ColoredConsoleEventArgs">
+            <summary>
+            Provides data for the <see cref="T:iTin.Logging.ColoredConsoleLog"/>.
+            </summary>
+            <seealso cref="T:System.ComponentModel.HandledEventArgs" />
+        </member>
+        <member name="P:iTin.Logging.EventArgs.ColoredConsoleEventArgs.Layout">
+            <summary>
+            Gets or sets the layout to use.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleLayout"/> that contains layout to use.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.EventArgs.ColoredConsoleEventArgs.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the message.
+            </value>
+        </member>
+        <member name="T:iTin.Logging.EventArgs.ConsoleEventArgs">
+            <summary>
+            Provides data for the <see cref="T:iTin.Logging.ConsoleLog"/>.
+            </summary>
+            <seealso cref="T:System.ComponentModel.HandledEventArgs" />
+        </member>
+        <member name="P:iTin.Logging.EventArgs.ConsoleEventArgs.Layout">
+            <summary>
+            Gets or sets the layout to use.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.ConsoleLayout"/> that contains layout to use.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.EventArgs.ConsoleEventArgs.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the message.
+            </value>
+        </member>
+        <member name="T:iTin.Logging.EventArgs.FileLogEventArgs">
+            <summary>
+            Provides data for the <see cref="T:iTin.Logging.FileLog"/>.
+            </summary>
+            <seealso cref="T:System.ComponentModel.HandledEventArgs" />
+        </member>
+        <member name="P:iTin.Logging.EventArgs.FileLogEventArgs.Layout">
+            <summary>
+            Gets or sets the layout to use.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.FileLogLayout"/> that contains layout to use.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.EventArgs.FileLogEventArgs.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            A <see cref="T:System.String"/> that contains the message.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.EventArgs.FileLogEventArgs.Writer">
+            <summary>
+            Gets or sets the writer to use.
+            </summary>
+            <value>
+            A <see cref="T:System.IO.StreamWriter"/> that contains the writer to use.
+            </value>
+        </member>
+        <member name="T:iTin.Logging.ColoredConsoleLog">
+            <summary>
+            Specialization of the <see cref="T:iTin.Logging.ComponentModel.ILog"/> interface. Writes messages to a colored console.
+            </summary>
+        </member>
+        <member name="E:iTin.Logging.ColoredConsoleLog.ColoredConsoleLogEntry">
+            <summary>
+            Occurs when the log text is about to be written.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ColoredConsoleLog.#ctor(iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.ILayout)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ConsoleLog" /> class.
+            </summary>
+            <param name="level">The log level.</param>
+            <param name="layout">The layout to apply.</param>
+        </member>
+        <member name="P:iTin.Logging.ColoredConsoleLog.Level">
+            <summary>
+            Gets the log verbosity.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies log verbosity.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ColoredConsoleLog.Layout">
+            <summary>
+            Gets layout reference.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.ColoredConsoleLayout"/> reference.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ColoredConsoleLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ColoredConsoleLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ColoredConsoleLog.WriteExceptionEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.Exception,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="exception">Exception to log</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ColoredConsoleLog.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.ConsoleLog">
+            <summary>
+            Specialization of the <see cref="T:iTin.Logging.ComponentModel.ILog"/> interface. Writes messages to a console.
+            </summary>
+        </member>
+        <member name="E:iTin.Logging.ConsoleLog.ConsoleLogEntry">
+            <summary>
+            Occurs when the log text is about to be written.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.ConsoleLog.#ctor(iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.ILayout)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.ConsoleLog" /> class.
+            </summary>
+            <param name="level">The log level.</param>
+            <param name="layout">The layout to apply.</param>
+        </member>
+        <member name="P:iTin.Logging.ConsoleLog.Level">
+            <summary>
+            Gets the log verbosity.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies log verbosity.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.ConsoleLog.Layout">
+            <summary>
+            Gets layout reference.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.ConsoleLayout"/> reference.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.ConsoleLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ConsoleLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ConsoleLog.WriteExceptionEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.Exception,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="exception">Exception to log</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.ConsoleLog.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.FileLog">
+            <summary>
+            Specialization of the <see cref="T:iTin.Logging.ComponentModel.ILog"/> interface. Writes messages to a simple text file.
+            </summary>
+        </member>
+        <member name="E:iTin.Logging.FileLog.FileLogEntry">
+            <summary>
+            Occurs when the log text is about to be written.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.FileLog.#ctor(iTin.Logging.ComponentModel.ILayout)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.FileLog"/> class.
+            </summary>
+            <param name="layout">The layout to apply.</param>
+        </member>
+        <member name="M:iTin.Logging.FileLog.#ctor(System.String,iTin.Logging.ComponentModel.ILayout)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.FileLog" /> class.
+            </summary>
+            <param name="filename">A sting that specifies the log file name.</param>
+            <param name="layout">The layout to apply.</param>
+        </member>
+        <member name="M:iTin.Logging.FileLog.#ctor(System.String,iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.ILayout,iTin.Logging.ComponentModel.FileLogSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.FileLog" /> class.
+            </summary>
+            <param name="filename">A string that specifies the log file name.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel" /> enumeration value that specifies log verbosity.</param>
+            <param name="layout">The layout to apply.</param>
+            <param name="settings">the file log settings</param>
+        </member>
+        <member name="P:iTin.Logging.FileLog.ApplicationName">
+            <summary>
+            Gets or sets the application name for this log file
+            </summary>
+            <value>
+            A string that specifies the application log file name.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.FileLog.Layout">
+            <summary>
+            Gets layout reference.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.FileLogLayout"/> reference.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.FileLog.Level">
+            <summary>
+            Gets the log verbosity.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies log verbosity.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.FileLog.Settings">
+            <summary>
+            Gets the file log settings.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Logging.ComponentModel.FileLogSettings"/> object.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.FileLog.Filename">
+            <summary>
+            Gets the log file name.
+            </summary>
+            <value>
+            A string that specifies the log file name.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.FileLog.ShowLog">
+            <summary>
+            Open notepad with log file content.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.FileLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.FileLog.WriteEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.FileLog.WriteExceptionEntry(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.Exception,iTin.Logging.ComponentModel.CallerData)">
+            <summary>
+            Writes a log entry.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="level">A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> enumeration value that specifies the event type.</param>
+            <param name="eventId">An integer identifying the event that occurred.</param>
+            <param name="exception">Exception to log</param>
+            <param name="callerData">Caller data information.</param>
+        </member>
+        <member name="M:iTin.Logging.FileLog.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:iTin.Logging.SystemHelper">
+            <summary>
+            Static class than contains methods for retrieve system information.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.SystemHelper.RunProgram(System.String,System.String)">
+            <summary>
+            Runs specified program with parameters and options.
+            </summary>
+            <param name="program">Program name</param>
+            <param name="arguments">Program arguments</param>
+        </member>
+        <member name="T:iTin.Logging.Logger">
+            <summary>
+            Provides logging functionality for the Application.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.Logger.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:iTin.Logging.Logger"/> class.
+            </summary>
+        </member>
+        <member name="M:iTin.Logging.Logger.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.Logger"/> class.
+            </summary>
+            <param name="caller">The caller file path reference.</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.#ctor(System.String,iTin.Logging.ComponentModel.ILog[],System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:iTin.Logging.Logger"/> class.
+            </summary>
+            <param name="applicationName">Name of application to log</param>
+            <param name="caller">The caller file path reference.</param>
+            <param name="writers">An array of <see cref="T:iTin.Logging.ComponentModel.ILog"/> objects used to initialize the <see cref="P:Logger.LogWriters"/> property.</param>
+        </member>
+        <member name="P:iTin.Logging.Logger.Instance">
+            <summary>
+            Gets or sets the logger instance.
+            </summary>
+            <value>
+            An Logger object which is the logger instance.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.Logger.RootDirectory">
+            <summary>
+            Gets the root directory app. This is root level to deep log
+            </summary>
+            <value>
+            Gets the root directory app.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.Logger.ApplicationName">
+            <summary>
+            Gets the name of the application.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="P:iTin.Logging.Logger.Deep">
+            <summary>
+            Gets or sets log deep.
+            </summary>
+            <value>
+            One of value of <see cref="T:iTin.Logging.ComponentModel.LogDeep"/> enumeration.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.Logger.Logs">
+            <summary>
+            Gets the collection of Log Writers that are used to log the Application events.
+            </summary>
+            <value>
+            An <b>IList</b>&lt;<see cref="T:iTin.Logging.ComponentModel.ILog"/>&gt; collection of Log Writers.
+            </value>
+        </member>
+        <member name="P:iTin.Logging.Logger.Status">
+            <summary>
+            Gets or sets status log.
+            </summary>
+            <value>
+            One of value of <see cref="T:iTin.Logging.ComponentModel.LogStatus"/> enumeration.
+            </value>
+        </member>
+        <member name="M:iTin.Logging.Logger.Debug(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows <b>Debug</b> message for all registered loggers.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.Error(System.String,System.Exception,System.String,System.String,System.Int32)">
+            <summary>
+            Shows <b>Error</b> message for all registered loggers.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="exception">An exception that contains the message to be logged.</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.Fatal(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows <b>Fatal</b> message for all registered loggers.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.Info(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows <b>Info</b> message for all registered loggers.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.Warn(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Shows <b>Warn</b> message for all registered loggers.
+            </summary>
+            <param name="message">A string that contains the message to be logged.</param>
+            <param name="filePath">File path of caller</param>
+            <param name="memberName">Member name of caller</param>
+            <param name="lineNumber">Line number of caller</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:iTin.Logging.Logger.ConvertToLogLevel(System.Diagnostics.TraceLevel)">
+            <summary>
+            Converts the <a href="http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelevel.aspx">TraceLevel</a> value to <see cref="T:iTin.Logging.ComponentModel.LogLevel"/>.
+            </summary>
+            <param name="level">A <a href="http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelevel.aspx">TraceLevel</a> value to be converted.</param>
+            <returns>
+            A <see cref="T:iTin.Logging.ComponentModel.LogLevel"/> value that corresponds to the passed <a href="http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelevel.aspx">TraceLevel</a>.
+            </returns>
+        </member>
+        <member name="M:iTin.Logging.Logger.Log(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            <para>
+            Writes the specified log record via all Log Writers available in the <see cref="P:iTin.Logging.Logger.Logs"/> collection.
+            </para>
+            </summary>
+            <param name="message">A string that specifies the message to be logged.</param>
+            <param name="level">A <see cref="T:LogLevel"/> enumeration value specifying the type of event that has occurred.</param>
+            <param name="eventId">An integer identifying the event that has occurred.</param>
+            <param name="filePath">The caller file path reference.</param>
+            <param name="memberName">The caller member name value.</param>
+            <param name="lineNumber">The caller line number value.</param>
+        </member>
+        <member name="M:iTin.Logging.Logger.LogException(System.String,iTin.Logging.ComponentModel.LogLevel,System.Int32,System.Exception,System.String,System.String,System.Int32)">
+            <summary>
+            <para>
+            Writes the specified exception log record via all Log Writers available in the <see cref="P:iTin.Logging.Logger.Logs"/> collection.
+            </para>
+            </summary>
+            <param name="message">A string that specifies the message to be logged.</param>
+            <param name="level">A <see cref="T:LogLevel"/> enumeration value specifying the type of event that has occurred.</param>
+            <param name="eventId">An integer identifying the event that has occurred.</param>
+            <param name="exception">The exception to log.</param>
+            <param name="filePath">The caller file path reference.</param>
+            <param name="memberName">The caller member name value.</param>
+            <param name="lineNumber">The caller line number value.</param>
+        </member>
+    </members>
+</doc>

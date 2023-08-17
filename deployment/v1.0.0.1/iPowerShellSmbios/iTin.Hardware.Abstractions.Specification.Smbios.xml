@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Hardware.Abstractions.Specification.Smbios</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Hardware.Abstractions.Specification.Smbios.ComponentModel.SmbiosConnectOptions">
+            <summary>
+            Defines remote user parameters
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Abstractions.Specification.Smbios.ComponentModel.SmbiosConnectOptions.MachineNameOrIpAddress">
+            <summary>
+            
+            </summary>
+            <value>
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Abstractions.Specification.Smbios.ComponentModel.SmbiosConnectOptions.UserName">
+            <summary>
+            
+            </summary>
+            <value>
+            </value>
+        </member>
+        <member name="P:iTin.Hardware.Abstractions.Specification.Smbios.ComponentModel.SmbiosConnectOptions.Password">
+            <summary>
+            
+            </summary>
+            <value>
+            </value>
+        </member>
+        <member name="T:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations">
+            <summary>
+            Define 
+            </summary>
+        </member>
+        <member name="M:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations"/> class from being created.
+            </summary>
+        </member>
+        <member name="P:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations.Instance">
+            <summary>
+            Gets an unique instance of this class.
+            </summary>
+            <value>
+            A <see cref="T:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations"/> reference that contains <b>SMBIOS</b> operations.
+            </value>
+        </member>
+        <member name="M:iTin.Hardware.Abstractions.Specification.Smbios.SmbiosOperations.GetSmbiosDataArray(iTin.Core.Hardware.Abstractions.Specification.Smbios.ISmbiosConnectOptions)">
+            <summary>
+            Gets a value containing the raw <b>SMBIOS</b> data.
+            </summary>
+            <param name="options">Connection options for remote use</param>
+            <returns>
+            The raw <b>SMBIOS</b> data.
+            </returns>
+        </member>
+    </members>
+</doc>

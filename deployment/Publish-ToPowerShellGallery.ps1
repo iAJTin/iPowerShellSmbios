@@ -7,3 +7,4 @@ Write-Host "Preparing module"
 # Ex. versión 1.0.0.0 -> cd ...iPowerShellSmbios\deployment\v1.0.0.0
 # Cuando solicite ApiKey introducir clave
 Publish-Module -Path .\iPowerShellSmbios -Repository PSGallery -NuGetApiKey (Read-Host "NuGetApiKey (from https://powershellgallery.com/account)") -verbose
+Publish-Module -Path .\iPowerShellSmbios -Repository PSGallery -NuGetApiKey oy2ktth5hdjvl62z4sxqz5cmd2yblr5e3lrpsoys5utyv4

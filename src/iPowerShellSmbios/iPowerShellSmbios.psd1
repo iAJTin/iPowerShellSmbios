@@ -3,7 +3,7 @@
 #
 # Generado por iTin
 #
-# Generado el 16/10/2020
+# Generado el 17/08/2023
 #
 
 @{
@@ -12,7 +12,7 @@
 RootModule = 'iPowerShellSmbios.dll'
 
 # Número de versión de este módulo.
-ModuleVersion = '1.0.0'
+ModuleVersion = '1.0.1'
 
 # PSEditions compatibles
 # CompatiblePSEditions = @()

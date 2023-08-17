@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>iTin.Core.Interop.Windows.Smbios</name>
+    </assembly>
+    <members>
+        <member name="T:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider">
+            <summary>
+            Defines firmware tables
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider.ACPI">
+            <summary>
+            ACPI
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider.FIRM">
+            <summary>
+            FIRM
+            </summary>
+        </member>
+        <member name="F:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider.RSMB">
+            <summary>
+            RSMB
+            </summary>
+        </member>
+        <member name="T:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.NativeMethods">
+            <summary>
+            Functions to handle system firmware tables.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.NativeMethods.EnumSystemFirmwareTables(iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider,System.IntPtr,System.Int32)">
+            <summary>
+            Enumerates all system firmware tables of the specified type. For more information, see https://docs.microsoft.com/es-es/windows/desktop/api/sysinfoapi/nf-sysinfoapi-enumsystemfirmwaretables.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.NativeMethods.EnumSystemFirmwareTables(System.UInt32,System.IntPtr,System.Int32)">
+            <summary>
+            Enumerates all system firmware tables of the specified type. For more information, see https://docs.microsoft.com/es-es/windows/desktop/api/sysinfoapi/nf-sysinfoapi-enumsystemfirmwaretables.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.NativeMethods.GetSystemFirmwareTable(iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.KnownProvider,System.Int32,System.IntPtr,System.Int32)">
+            <summary>
+            Retrieves the specified firmware table from the firmware table provider. For more information, see https://docs.microsoft.com/es-es/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemfirmwaretable.
+            </summary>
+        </member>
+        <member name="M:iTin.Core.Interop.Windows.Development.SystemServices.SystemInformation.Firmware.NativeMethods.GetSystemFirmwareTable(System.UInt32,System.Int32,System.IntPtr,System.Int32)">
+            <summary>
+            Retrieves the specified firmware table from the firmware table provider. For more information, see https://docs.microsoft.com/es-es/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemfirmwaretable.
+            </summary>
+        </member>
+    </members>
+</doc>
